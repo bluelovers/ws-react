@@ -1,0 +1,36 @@
+{
+  "name": "material-ui-theme-state",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "main": "lib/index",
+  "module": "esm/index",
+  "scripts": {
+    "build:tsc": "yarn run tsc:default && yarn run tsc:esm",
+    "coverage": "npx nyc yarn run test",
+    "lint": "npx eslint **/*.ts",
+    "ncu": "npx yarn-tool ncu -u",
+    "npm:publish": "npm publish",
+    "postpublish_": "git commit -m \"publish new version\" .",
+    "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "sort-package-json": "npx sort-package-json ./package.json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc:default": "tsc -p tsconfig.json",
+    "tsc:esm": "tsc -p tsconfig.esm.json"
+  },
+  "dependencies": {
+    "ts-type": "^1.2.12"
+  },
+  "devDependencies": {
+    "@material-ui/core": "^4.8.3",
+    "@types/bluebird": "^3.5.29",
+    "@types/react": "^16.9.17",
+    "react": "^16.12.0"
+  },
+  "peerDependencies": {
+    "@material-ui/core": "^4.8.3",
+    "@types/react": "^16.9.17",
+    "react": "^16.12.0"
+  }
+}

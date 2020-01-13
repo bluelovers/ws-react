@@ -1,0 +1,18 @@
+{
+  "extends": "@bluelovers/tsconfig/esm/module.json",
+  "compilerOptions": {
+    "sourceRoot": "./lib",
+    "outDir": "./esm",
+    "rootDir": "./lib",
+    "module": "esnext",
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "inlineSourceMap": false,
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules",
+    "esm",
+    "test"
+  ]
+}
