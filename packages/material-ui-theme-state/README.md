@@ -1,6 +1,6 @@
 # README.md
 
-    <description>
+    a way for change material-ui theme
 
 ## install
 

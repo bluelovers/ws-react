@@ -1,11 +1,27 @@
 {
   "name": "material-ui-theme-state",
   "version": "1.0.1",
-  "description": "",
+  "description": "a way for change material-ui theme",
+  "keywords": [
+    "react",
+    "theme",
+    "material-ui"
+  ],
+  "homepage": "https://github.com/bluelovers/ws-react/material-ui-theme-state#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-react/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-react.git"
+  },
   "license": "ISC",
   "author": "",
   "main": "lib/index",
   "module": "esm/index",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "build:tsc": "yarn run tsc:default && yarn run tsc:esm",
     "coverage": "npx nyc yarn run test",
