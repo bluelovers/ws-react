@@ -9,6 +9,20 @@ yarn add material-ui-theme-state
 ```
 
 ```typescript jsx
+import { useTheme, createTheme } from 'material-ui-theme-state/lib/global';
+import { useTheme, createTheme } from 'material-ui-theme-state/esm/global';
+```
+
+or
+
+```typescript jsx
+import createMuiThemeState, { IThemeExtra } from 'material-ui-theme-state';
+const { useTheme, createTheme } = createMuiThemeState();
+```
+
+---
+
+```typescript jsx
 import React, { useState, Dispatch, SetStateAction, useEffect, ReactNode } from "react";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { MuiThemeProvider, Theme } from '@material-ui/core/styles';

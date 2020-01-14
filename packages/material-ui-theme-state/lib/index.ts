@@ -13,8 +13,8 @@ export interface IThemeExtra<T extends Theme = Theme, O extends ThemeOptions = T
 	setTheme?(theme: SetStateAction<T | O>, autoSpread?: boolean): ITSResolvable<void | T | O>;
 }
 
-export function create<T extends Theme = ReturnType<typeof _createMuiTheme>, O extends ThemeOptions = Parameters<typeof _createMuiTheme>[0]>(options: {
-	store: WeakMap<T, IThemeExtra<T, O>["setTheme"]>;
+export function create<T extends Theme = ReturnType<typeof _createMuiTheme>, O extends ThemeOptions = Parameters<typeof _createMuiTheme>[0]>(options?: {
+	store?: WeakMap<T, IThemeExtra<T, O>["setTheme"]>;
 }): {
 	store: WeakMap<T, IThemeExtra<T, O>["setTheme"]>;
 	useTheme(): IThemeExtra<T, O>;
