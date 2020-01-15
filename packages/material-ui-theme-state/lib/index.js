@@ -8,7 +8,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const createMuiTheme_1 = __importDefault(require("@material-ui/core/styles/createMuiTheme"));
 const useTheme_1 = __importDefault(require("@material-ui/core/styles/useTheme"));
-function create(options) {
+function create(options = {}) {
     let { store } = options;
     store = store || new WeakMap();
     const useTheme = function useTheme() {

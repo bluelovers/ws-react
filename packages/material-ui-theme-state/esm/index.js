@@ -3,7 +3,7 @@
  */
 import _createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import _useTheme from '@material-ui/core/styles/useTheme';
-export function create(options) {
+export function create(options = {}) {
     let { store } = options;
     store = store || new WeakMap();
     const useTheme = function useTheme() {
