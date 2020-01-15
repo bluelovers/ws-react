@@ -1,10 +1,13 @@
 {
   "name": "material-ui-theme-state",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "a way for change material-ui theme",
   "keywords": [
     "react",
     "theme",
+    "useTheme",
+    "createTheme",
+    "createMuiTheme",
     "material-ui"
   ],
   "homepage": "https://github.com/bluelovers/ws-react/material-ui-theme-state#readme",
@@ -16,7 +19,7 @@
     "url": "git+https://github.com/bluelovers/ws-react.git"
   },
   "license": "ISC",
-  "author": "",
+  "author": "bluelovers",
   "main": "lib/index",
   "module": "esm/index",
   "directories": {
@@ -32,8 +35,8 @@
     "prepublishOnly": "yarn run ncu && yarn run sort-package-json",
     "sort-package-json": "npx sort-package-json ./package.json",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc:default": "tsc -p tsconfig.json",
-    "tsc:esm": "tsc -p tsconfig.esm.json"
+    "tsc:default": "npx tsc -p tsconfig.json",
+    "tsc:esm": "npx tsc -p tsconfig.esm.json"
   },
   "dependencies": {
     "ts-type": "^1.2.12"
