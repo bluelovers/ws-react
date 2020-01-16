@@ -1,0 +1,55 @@
+{
+  "name": "jsx-linebreak",
+  "version": "1.0.0",
+  "description": "Break a string to lines at newlines, and either wrap each line by a configurable wrapper or append a <br /> to each line.",
+  "keywords": [
+    "react",
+    "break",
+    "newline",
+    "wrapper",
+    "linebreak",
+    "crlf",
+    "preact"
+  ],
+  "homepage": "https://github.com/bluelovers/ws-reac/tree/master/packages/jsx-linebreak#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-react/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-react.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "coverage": "npx nyc yarn run test",
+    "lint": "npx eslint **/*.ts",
+    "ncu": "npx yarn-tool ncu -u",
+    "npm:publish": "npm publish",
+    "postpublish_": "git commit -m \"publish new version\" .",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "sort-package-json": "npx yarn-tool sort",
+    "test": "npx ts-node ./test/demo.tsx",
+    "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "tsc:default": "tsc -p tsconfig.json",
+    "tsc:esm": "tsc -p tsconfig.esm.json"
+  },
+  "dependencies": {
+    "crlf-normalize": "^1.0.3"
+  },
+  "devDependencies": {
+    "preact": "^10.2.1",
+    "preact-render-to-string": "^5.1.3",
+    "react": "^16.12.0"
+  },
+  "peerDependencies": {
+    "preact": "^10.2.1",
+    "react": "^16.12.0"
+  }
+}
