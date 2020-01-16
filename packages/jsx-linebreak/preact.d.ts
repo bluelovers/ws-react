@@ -1,19 +1,33 @@
 import PReact from 'preact';
 export declare const LinkBreak: <T extends ({
+    children?: string;
+} & {
+    noBR?: boolean;
+    onlyBR?: boolean;
+}) | ({
     children: any;
 } & {
-    br?: boolean;
+    noBR?: boolean;
+    onlyBR?: boolean;
 }) | ({
     children?: any;
 } & {
-    br?: boolean;
+    noBR?: boolean;
+    onlyBR?: boolean;
 }) = ({
+    children?: string;
+} & {
+    noBR?: boolean;
+    onlyBR?: boolean;
+}) | ({
     children: any;
 } & {
-    br?: boolean;
+    noBR?: boolean;
+    onlyBR?: boolean;
 }) | ({
     children?: any;
 } & {
-    br?: boolean;
-}), V extends PReact.VNode<any> = PReact.VNode<any>>({ children, br, ...props }: T) => PReact.VNode<any>;
+    noBR?: boolean;
+    onlyBR?: boolean;
+}), V extends PReact.VNode<any> = PReact.VNode<any>>({ children, noBR, onlyBR, ...props }: T) => PReact.VNode<any>;
 export default LinkBreak;

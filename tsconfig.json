@@ -1,3 +1,8 @@
 {
-  "extends": "@bluelovers/tsconfig/esm/esModuleInterop"
+  "extends": "@bluelovers/tsconfig/esm/esModuleInterop",
+  "compilerOptions": {
+    "jsx": "react",
+    "sourceMap": true,
+    "inlineSourceMap": false
+  }
 }
