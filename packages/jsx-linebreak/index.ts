@@ -3,6 +3,7 @@
  */
 
 import { crlf, R_CRLF, LF } from 'crlf-normalize';
+import { createElement, Fragment } from 'preact';
 
 export type IPropLike<T = any> = {
 	children: T
@@ -64,6 +65,24 @@ export function createLinkBreak<P extends IPropLike, N>(createElement: (...argv)
 
 		return createElement(Fragment, props, children)
 	}
+}
+
+export function createBR<N>(createElement: (...argv) => N, Fragment)
+{
+	return ({
+		key,
+		ref,
+		...props
+	} : {
+		key?,
+		ref?,
+	}) => createElement(Fragment, {
+		key,
+		ref,
+	}, [
+		createElement('br', props, null),
+		createElement(Fragment, null, LF),
+	]);
 }
 
 export default createLinkBreak

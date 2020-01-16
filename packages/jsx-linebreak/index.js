@@ -33,5 +33,15 @@ function createLinkBreak(createElement, Fragment) {
     };
 }
 exports.createLinkBreak = createLinkBreak;
+function createBR(createElement, Fragment) {
+    return ({ key, ref, ...props }) => createElement(Fragment, {
+        key,
+        ref,
+    }, [
+        createElement('br', props, null),
+        createElement(Fragment, null, crlf_normalize_1.LF),
+    ]);
+}
+exports.createBR = createBR;
 exports.default = createLinkBreak;
 //# sourceMappingURL=index.js.map

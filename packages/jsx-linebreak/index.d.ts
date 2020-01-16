@@ -16,4 +16,8 @@ export declare type IWarpPropLike<T> = (T | {
     onlyBR?: boolean;
 };
 export declare function createLinkBreak<P extends IPropLike, N>(createElement: (...argv: any[]) => N, Fragment: any): <T extends IWarpPropLike<P> = IWarpPropLike<P>, V extends N = N>({ children, noBR, onlyBR, ...props }: T) => N;
+export declare function createBR<N>(createElement: (...argv: any[]) => N, Fragment: any): ({ key, ref, ...props }: {
+    key?: any;
+    ref?: any;
+}) => N;
 export default createLinkBreak;
