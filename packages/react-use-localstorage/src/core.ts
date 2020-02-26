@@ -1,28 +1,38 @@
 import { Dispatch, useCallback, useEffect, useState } from 'react';
 
-export interface LocalStorageLikeMini extends Pick<WindowLocalStorage["localStorage"], 'getItem' | 'setItem'> {}
+export interface IStorageLikeMini extends Pick<WindowLocalStorage["localStorage"], 'getItem' | 'setItem' | 'removeItem'> {}
 
-export function createLocalStorageHook(localStorage: WindowLocalStorage["localStorage"])
+export function isNullItem(value: unknown): value is null
 {
-	if (typeof localStorage.setItem !== 'function' || typeof localStorage.getItem !== 'function')
+	return typeof value === 'undefined' || value === null
+}
+
+export function createStorageHook(localStorage: WindowLocalStorage["localStorage"])
+{
+	if (isNullItem(localStorage) || typeof localStorage.setItem !== 'function' || typeof localStorage.getItem !== 'function')
 	{
 		throw new TypeError(`${localStorage} not a localStorage like object`)
 	}
 
-	return function useLocalStorage(
+	return function useStorage(
 		key: string,
-		initialValue: string = '',
+		initialValue?: string,
 	): [string, Dispatch<string>]
 	{
 		const [value, setValue] = useState(
 			() =>
 			{
 				let value = localStorage.getItem(key);
-				if (typeof value === 'undefined' || value === null)
+				if (isNullItem(value))
 				{
-					value = initialValue
+					value = initialValue as any;
+
+					if (isNullItem(value))
+					{
+						value = null
+					}
 				}
-				return value
+				return value as Exclude<typeof value, null | undefined>
 			},
 		);
 
@@ -37,9 +47,9 @@ export function createLocalStorageHook(localStorage: WindowLocalStorage["localSt
 			const newValue = localStorage.getItem(key);
 			if (value !== newValue)
 			{
-				if (typeof newValue === 'undefined' || newValue === null)
+				if (isNullItem(newValue))
 				{
-					setValue(initialValue);
+					setValue(initialValue as any);
 				}
 				else
 				{
@@ -53,15 +63,16 @@ export function createLocalStorageHook(localStorage: WindowLocalStorage["localSt
 			const handleStorage = useCallback(
 				(event: StorageEvent) =>
 				{
-					if (event.key === key && event.newValue !== value)
+					const { newValue } = event;
+					if (event.key === key && newValue !== value)
 					{
-						if (typeof event.newValue === 'undefined' || event.newValue === null)
+						if (isNullItem(newValue))
 						{
-							setValue(initialValue);
+							setValue(initialValue as any);
 						}
 						else
 						{
-							setValue(event.newValue);
+							setValue(newValue);
 						}
 					}
 				},
@@ -85,4 +96,4 @@ export function createLocalStorageHook(localStorage: WindowLocalStorage["localSt
 	}
 }
 
-export default createLocalStorageHook
+export default createStorageHook

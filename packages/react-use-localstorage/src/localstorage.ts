@@ -1,3 +1,5 @@
-import createLocalStorageHook from './core';
+import createStorageHook from './core';
 
-export default createLocalStorageHook(window.localStorage)
+export const useStorage = createStorageHook(window.localStorage);
+
+export default useStorage
