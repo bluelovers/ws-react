@@ -14,7 +14,7 @@ describe('useLocalStorage', (): void =>
 		NONE: null,
 	};
 
-	describe('Setup', () =>
+	describe('Setup check', () =>
 	{
 
 		it('Throw Error when createStorageHook(null)', () =>
@@ -22,13 +22,31 @@ describe('useLocalStorage', (): void =>
 			expect(() => createStorageHook(null)).toThrowError();
 		});
 
+		it('Returns null without initial value', () =>
+		{
+			const { result } = renderHook(() => useLocalStorage(KEY + '_NO_INITIAL_VALUE'));
+			expect(result.current[0]).toStrictEqual(null);
+		});
+
+		it('Returns null with undefined', () =>
+		{
+			const { result } = renderHook(() => useLocalStorage(KEY + '_NO_INITIAL_VALUE', undefined));
+			expect(result.current[0]).toStrictEqual(null);
+		});
+
+		it('Returns null with null', () =>
+		{
+			const { result } = renderHook(() => useLocalStorage(KEY + '_NO_INITIAL_VALUE', null));
+			expect(result.current[0]).toStrictEqual(null);
+		});
+
 		it('Returns initial value', () =>
 		{
 			const { result } = renderHook(() => useLocalStorage(KEY, VALUE.INITIAL));
-			expect(result.current[0]).toMatch(VALUE.INITIAL);
+			expect(result.current[0]).toStrictEqual(VALUE.INITIAL);
 		});
 
-		it('When no initial value is passed, returns an empty string', () =>
+		it('When no initial value is passed, returns null', () =>
 		{
 			const { result } = renderHook(() => useLocalStorage(KEY));
 			expect(result.current[0]).toStrictEqual(VALUE.NONE);
@@ -37,32 +55,65 @@ describe('useLocalStorage', (): void =>
 		it('Returns setValue function', () =>
 		{
 			const { result } = renderHook(() => useLocalStorage(KEY, VALUE.INITIAL));
-			expect(typeof result.current[1]).toMatch('function');
+			expect(result.current[1]).toBeInstanceOf(Function);
 		});
 	});
 
-	it('When `setValue()` is called, the `value` updates', () =>
-	{
-		const { result } = renderHook(() => useLocalStorage(KEY, VALUE.INITIAL));
-
-		act(() =>
+	describe('Value check', () => {
+		it('When `setValue()` is called, the `value` updates', () =>
 		{
-			result.current[1](VALUE.CHANGED);
+			const { result } = renderHook(() => useLocalStorage(KEY, VALUE.INITIAL));
+
+			act(() =>
+			{
+				result.current[1](VALUE.CHANGED);
+			});
+
+			expect(result.current[0]).toStrictEqual(VALUE.CHANGED);
 		});
 
-		expect(result.current[0]).toMatch(VALUE.CHANGED);
+		it('When `value` changes, `localStorage` is updated', () =>
+		{
+			const { result } = renderHook(() => useLocalStorage(KEY, VALUE.INITIAL));
+
+			act(() =>
+			{
+				result.current[1](VALUE.CHANGED);
+			});
+
+			expect(localStorage.getItem(KEY)).toBe(VALUE.CHANGED);
+		});
 	});
 
-	it('When `value` changes, `localStorage` is updated', () =>
+	describe('Null check', () =>
 	{
-		const { result } = renderHook(() => useLocalStorage(KEY, VALUE.INITIAL));
-
-		act(() =>
+		it('null', () =>
 		{
-			result.current[1](VALUE.CHANGED);
+			let KEY = 'KEY_null';
+
+			const { result } = renderHook(() => useLocalStorage(KEY, VALUE.INITIAL));
+
+			act(() =>
+			{
+				result.current[1](null);
+			});
+
+			expect(localStorage.getItem(KEY)).toStrictEqual(null);
 		});
 
-		expect(localStorage.getItem(KEY)).toBe(VALUE.CHANGED);
+		it('undefined', () =>
+		{
+			let KEY = 'KEY_undefined';
+
+			const { result } = renderHook(() => useLocalStorage(KEY, VALUE.INITIAL));
+
+			act(() =>
+			{
+				result.current[1](undefined);
+			});
+
+			expect(localStorage.getItem(KEY)).toStrictEqual(null);
+		});
 	});
 
 	describe('Util', () =>
@@ -82,6 +133,9 @@ describe('useLocalStorage', (): void =>
 		{
 			expect(iifNullItem(null, undefined)).toBeUndefined();
 		});
-
 	});
+
+	afterAll(async () => {
+		console.dir(localStorage);
+	})
 });

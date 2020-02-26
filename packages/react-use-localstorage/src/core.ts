@@ -1,5 +1,5 @@
 import { Dispatch, useCallback, useEffect, useState, SetStateAction } from 'react';
-import type { IStorageLike, useStorage, IDispatchSetStateAction, IStateInitialValue, IUnpackStateInitialValue } from './types';
+import type { IStorageLike, IDispatchSetStateAction, IStateInitialValue, IUnpackStateInitialValue } from './types';
 import { notStorageLike, isNullItem, getStateInitialValue, isSetStateAction, iifNullItem } from './util';
 
 export function createStorageHook<S extends string = string>(localStorage: IStorageLike)
@@ -37,9 +37,16 @@ export function createStorageHook<S extends string = string>(localStorage: IStor
 			setValue((prevState => {
 				let value = isSetStateAction(newValue) ? newValue(prevState) : newValue;
 
-				value = iifNullItem(value);
+				//value = iifNullItem(value);
 
-				localStorage.setItem(key, value);
+				if (isNullItem(value))
+				{
+					localStorage.removeItem(key)
+				}
+				else
+				{
+					localStorage.setItem(key, value);
+				}
 
 				return value
 			}));

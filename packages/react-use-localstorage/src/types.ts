@@ -11,4 +11,4 @@ export type ISetStateActionFn<S> = (prevState: S) => S;
 
 //export type useStorage<T> = <S extends T>(key: string, initialValue?: IStateInitialValue<S>) => [S, IDispatchSetStateAction<S>];
 
-export declare function useStorage<S>(key: string, initialValue?: IStateInitialValue<S>): [S, IDispatchSetStateAction<S>]
+declare function useStorage<S>(key: string, initialValue?: IStateInitialValue<S>): [S, IDispatchSetStateAction<S>]
