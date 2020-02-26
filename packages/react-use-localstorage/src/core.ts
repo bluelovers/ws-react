@@ -1,59 +1,58 @@
-import { Dispatch, useCallback, useEffect, useState } from 'react';
+import { Dispatch, useCallback, useEffect, useState, SetStateAction } from 'react';
+import type { IStorageLike, useStorage, IDispatchSetStateAction, IStateInitialValue, IUnpackStateInitialValue } from './types';
+import { notStorageLike, isNullItem, getStateInitialValue, isSetStateAction, iifNullItem } from './util';
 
-export interface IStorageLikeMini extends Pick<WindowLocalStorage["localStorage"], 'getItem' | 'setItem' | 'removeItem'> {}
-
-export function isNullItem(value: unknown): value is null
+export function createStorageHook<S extends string = string>(localStorage: IStorageLike)
 {
-	return typeof value === 'undefined' || value === null
-}
-
-export function createStorageHook(localStorage: WindowLocalStorage["localStorage"])
-{
-	if (isNullItem(localStorage) || typeof localStorage.setItem !== 'function' || typeof localStorage.getItem !== 'function')
+	if (notStorageLike(localStorage))
 	{
 		throw new TypeError(`${localStorage} not a localStorage like object`)
 	}
 
 	return function useStorage(
 		key: string,
-		initialValue?: string,
-	): [string, Dispatch<string>]
+		initialValue?: IStateInitialValue<S>,
+	): [S, IDispatchSetStateAction<S>]
 	{
-		const [value, setValue] = useState(
+
+		const [value, setValue] = useState<S>(
 			() =>
 			{
 				let value = localStorage.getItem(key);
 				if (isNullItem(value))
 				{
-					value = initialValue as any;
+					value = getStateInitialValue(initialValue);
 
 					if (isNullItem(value))
 					{
-						value = null
+						value = iifNullItem(value)
 					}
 				}
-				return value as Exclude<typeof value, null | undefined>
+				return value as any as S
 			},
 		);
 
-		const setItem = (newValue: string) =>
+		const setItem = (newValue: SetStateAction<S>) =>
 		{
-			setValue(newValue);
-			localStorage.setItem(key, newValue);
+			setValue((prevState => {
+				let value = isSetStateAction(newValue) ? newValue(prevState) : newValue;
+
+				value = iifNullItem(value);
+
+				localStorage.setItem(key, value);
+
+				return value
+			}));
 		};
 
 		useEffect(() =>
 		{
-			const newValue = localStorage.getItem(key);
-			if (value !== newValue)
+			let oldValue = localStorage.getItem(key);
+			if (value !== oldValue)
 			{
-				if (isNullItem(newValue))
+				if (!isNullItem(oldValue))
 				{
-					setValue(initialValue as any);
-				}
-				else
-				{
-					setValue(newValue);
+					setValue(iifNullItem(oldValue as S));
 				}
 			}
 		});
@@ -63,17 +62,11 @@ export function createStorageHook(localStorage: WindowLocalStorage["localStorage
 			const handleStorage = useCallback(
 				(event: StorageEvent) =>
 				{
-					const { newValue } = event;
+					let { newValue } = event;
 					if (event.key === key && newValue !== value)
 					{
-						if (isNullItem(newValue))
-						{
-							setValue(initialValue as any);
-						}
-						else
-						{
-							setValue(newValue);
-						}
+						newValue = iifNullItem(newValue);
+						setValue(newValue as S)
 					}
 				},
 				[value],

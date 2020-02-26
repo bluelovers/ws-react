@@ -1,33 +1,43 @@
-class LocalStorageMock {
-  store: any;
-  length: number;
-  constructor() {
-    this.store = {};
-    this.length = 0;
-  }
+export class LocalStorageMock
+{
+	store: any;
+	length: number;
 
-  clear() {
-    this.store = {};
-    this.length = 0;
-  }
+	constructor()
+	{
+		this.store = {};
+		this.length = 0;
+	}
 
-  getItem(key: string) {
-    return this.store[key] || null;
-  }
+	clear()
+	{
+		this.store = {};
+		this.length = 0;
+	}
 
-  key(key: number) {
-    return Object.keys(this.store)[key] || null;
-  }
+	getItem(key: string)
+	{
+		return this.store[key] || null;
+	}
 
-  setItem(key: string, value: string) {
-    this.store[key] = value.toString();
-    this.length = Object.keys(this.store).length;
-  }
+	key(key: number)
+	{
+		return Object.keys(this.store)[key] || null;
+	}
 
-  removeItem(key: string) {
-    delete this.store[key];
-    this.length = Object.keys(this.store).length;
-  }
+	setItem(key: string, value: string)
+	{
+		this.store[key] = value.toString();
+		this.length = Object.keys(this.store).length;
+	}
+
+	removeItem(key: string)
+	{
+		delete this.store[key];
+		this.length = Object.keys(this.store).length;
+	}
 }
 
-localStorage = new LocalStorageMock();
+export const localStorage = new LocalStorageMock();
+
+export default localStorage
