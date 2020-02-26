@@ -1,45 +1,88 @@
 import { Dispatch, useCallback, useEffect, useState } from 'react';
 
-export default function useLocalStorage(
-	key: string,
-	initialValue: string = '',
-): [string, Dispatch<string>]
+export interface LocalStorageLikeMini extends Pick<WindowLocalStorage["localStorage"], 'getItem' | 'setItem'> {}
+
+export function createLocalStorageHook(localStorage: WindowLocalStorage["localStorage"])
 {
-	const [value, setValue] = useState(
-		() => window.localStorage.getItem(key) || initialValue,
-	);
-
-	const setItem = (newValue: string) =>
+	if (typeof localStorage.setItem !== 'function' || typeof localStorage.getItem !== 'function')
 	{
-		setValue(newValue);
-		window.localStorage.setItem(key, newValue);
-	};
+		throw new TypeError(`${localStorage} not a localStorage like object`)
+	}
 
-	useEffect(() =>
+	return function useLocalStorage(
+		key: string,
+		initialValue: string = '',
+	): [string, Dispatch<string>]
 	{
-		const newValue = window.localStorage.getItem(key);
-		if (value !== newValue)
-		{
-			setValue(newValue || initialValue);
-		}
-	});
-
-	const handleStorage = useCallback(
-		(event: StorageEvent) =>
-		{
-			if (event.key === key && event.newValue !== value)
+		const [value, setValue] = useState(
+			() =>
 			{
-				setValue(event.newValue || initialValue);
+				let value = localStorage.getItem(key);
+				if (typeof value === 'undefined' || value === null)
+				{
+					value = initialValue
+				}
+				return value
+			},
+		);
+
+		const setItem = (newValue: string) =>
+		{
+			setValue(newValue);
+			localStorage.setItem(key, newValue);
+		};
+
+		useEffect(() =>
+		{
+			const newValue = localStorage.getItem(key);
+			if (value !== newValue)
+			{
+				if (typeof newValue === 'undefined' || newValue === null)
+				{
+					setValue(initialValue);
+				}
+				else
+				{
+					setValue(newValue);
+				}
 			}
-		},
-		[value],
-	);
+		});
 
-	useEffect(() =>
-	{
-		window.addEventListener('storage', handleStorage);
-		return () => window.removeEventListener('storage', handleStorage);
-	}, [handleStorage]);
+		if (typeof window !== "undefined")
+		{
+			const handleStorage = useCallback(
+				(event: StorageEvent) =>
+				{
+					if (event.key === key && event.newValue !== value)
+					{
+						if (typeof event.newValue === 'undefined' || event.newValue === null)
+						{
+							setValue(initialValue);
+						}
+						else
+						{
+							setValue(event.newValue);
+						}
+					}
+				},
+				[value],
+			);
 
-	return [value, setItem];
+			useEffect(() =>
+			{
+
+				if (typeof window !== "undefined")
+				{
+					window.addEventListener('storage', handleStorage);
+					return () => window.removeEventListener('storage', handleStorage);
+				}
+
+				return void 0
+			}, [handleStorage]);
+		}
+
+		return [value, setItem];
+	}
 }
+
+export default createLocalStorageHook
