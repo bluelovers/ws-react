@@ -9,7 +9,7 @@
     "prepublish:lockfile": "ynpx sync-lockfile",
     "lerna:publish": "lerna publish",
     "lerna:publish:yes": "lerna publish --yes --cd-version patch",
-    "postpublish": "git subrepo push packages/react-use-localstorage",
+    "postpublish_": "git subrepo push packages/react-use-localstorage",
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx sort-package-json ./package.json",
     "test": "echo \"Error: no test specified\" && exit 1"
