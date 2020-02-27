@@ -1,7 +1,6 @@
 import { IStorageLike } from '../types';
 export declare abstract class AbstractStorageProxy<S extends IStorageLike> {
-    #private;
-    protected storage: S;
+    protected readonly storage: S;
     constructor(storage: S);
     abstract getItem<T = unknown, K extends string = string>(key: K): T;
     abstract setItem<T = unknown, K extends string = string>(key: K, value: T): any;

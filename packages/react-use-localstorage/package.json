@@ -64,5 +64,6 @@
   "dependencies": {
     "local-storage-fallback": "^4.1.1",
     "ts-type": "^1.2.13"
-  }
+  },
+  "gitHead": "78b9a46321b2705c000c0fab6453357d45349ec6"
 }

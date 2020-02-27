@@ -1,13 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const util_1 = require("../util");
+const handleMap = new WeakMap();
 class AbstractStorageProxy {
     constructor(storage) {
         this.storage = storage;
-        this.#handleMap = new WeakMap();
         util_1.assertStorageLike(this.storage);
     }
-    #handleMap;
     hashKey(key) {
         return key;
     }
@@ -31,15 +30,15 @@ class AbstractStorageProxy {
     }
     mount(handleStorage) {
         if (typeof window !== "undefined") {
-            if (this.#handleMap.has(handleStorage)) {
-                return this.#handleMap.get(handleStorage);
+            if (handleMap.has(handleStorage)) {
+                return handleMap.get(handleStorage);
             }
             window.addEventListener('storage', handleStorage);
             const unmount = () => {
                 window.removeEventListener('storage', handleStorage);
-                this.#handleMap.delete(handleStorage);
+                handleMap.delete(handleStorage);
             };
-            this.#handleMap.set(handleStorage, unmount);
+            handleMap.set(handleStorage, unmount);
             return unmount;
         }
         return () => void 0;

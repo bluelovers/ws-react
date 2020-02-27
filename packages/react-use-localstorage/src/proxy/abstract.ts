@@ -1,11 +1,11 @@
 import { IStorageLike } from '../types';
 import { assertStorageLike, iifNullItem, isNullItem } from '../util';
 
+const handleMap = new WeakMap<(event: StorageEvent) => void, () => void>();
+
 export abstract class AbstractStorageProxy<S extends IStorageLike>
 {
-	#handleMap = new WeakMap<(event: StorageEvent) => void, () => void>();
-
-	constructor(protected storage: S)
+	constructor(protected readonly storage: S)
 	{
 		assertStorageLike(this.storage);
 	}
@@ -51,9 +51,9 @@ export abstract class AbstractStorageProxy<S extends IStorageLike>
 	{
 		if (typeof window !== "undefined")
 		{
-			if (this.#handleMap.has(handleStorage))
+			if (handleMap.has(handleStorage))
 			{
-				return this.#handleMap.get(handleStorage)
+				return handleMap.get(handleStorage)
 			}
 
 			window.addEventListener('storage', handleStorage);
@@ -61,10 +61,10 @@ export abstract class AbstractStorageProxy<S extends IStorageLike>
 			const unmount = () =>
 			{
 				window.removeEventListener('storage', handleStorage);
-				this.#handleMap.delete(handleStorage);
+				handleMap.delete(handleStorage);
 			};
 
-			this.#handleMap.set(handleStorage, unmount);
+			handleMap.set(handleStorage, unmount);
 
 			return unmount;
 		}
