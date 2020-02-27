@@ -6,7 +6,7 @@
 [subrepo]
 	remote = https://github.com/bluelovers/react-use-localstorage.git
 	branch = master
-	commit = 94374b5a9aac2a58d7b5272914c0c3531c243091
-	parent = 7b74a737b59de0cac855f341a7dee7eaa642662c
+	commit = 2bbb239328047a679df7eee3de076251e0e8415e
+	parent = a30e102f541e10365ea9f8d637e469c1defc052d
 	method = merge
 	cmdver = 0.4.1
