@@ -1,6 +1,6 @@
 {
   "name": "react-use-localstorage2",
-  "version": "3.4.3",
+  "version": "4.0.0",
   "description": "Access localStorage-like storage with React hooks, for Server and Client",
   "keywords": [
     "react",
@@ -60,5 +60,9 @@
   },
   "peerDependencies": {
     "react": "^16.13.0"
+  },
+  "dependencies": {
+    "local-storage-fallback": "^4.1.1",
+    "ts-type": "^1.2.13"
   }
 }

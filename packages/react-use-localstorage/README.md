@@ -49,6 +49,10 @@ ReactDOM.render(<App />, rootElement);
 
 ## Changelog Fork
 
+### v4
+
+breaking change and support save any JSON.stringify able value
+
 ### 3.4.3
 
 - Breaking changes with null and undefined

@@ -3,7 +3,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const v3_1 = __importDefault(require("../core/v3"));
-exports.useStorage = v3_1.default(window.sessionStorage);
+const core_1 = require("../core");
+const proxy_1 = __importDefault(require("../proxy"));
+exports.useStorage = core_1.createStorageHook(new proxy_1.default(window.sessionStorage));
 exports.default = useStorage;
 //# sourceMappingURL=session.js.map

@@ -1,9 +1,10 @@
-import createStorageHook from '../core/v3';
+import { createStorageHook } from '../core';
 import { IStateInitialValue, IDispatchSetStateAction } from '../types';
+import StorageProxy from '../proxy';
 
 export declare function useStorage<S>(key: string, initialValue?: IStateInitialValue<S>): [S, IDispatchSetStateAction<S>]
 export declare function useStorage<S = unknown>(key: string): [S, IDispatchSetStateAction<S>]
 
-exports.useStorage = createStorageHook(window.sessionStorage);
+exports.useStorage = createStorageHook(new StorageProxy(window.sessionStorage));
 
 export default useStorage
