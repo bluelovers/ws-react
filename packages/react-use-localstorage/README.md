@@ -1,29 +1,25 @@
-# react-use-localstorage
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors)
+# react-use-localstorage2
 
 _depends on stable v16.8.1~_
 
-![version](https://img.shields.io/npm/v/react-use-localstorage.svg?style=flat-square)
-![size](https://img.shields.io/bundlephobia/min/react-use-localstorage.svg?style=flat-square)
-![minzippedsize](https://img.shields.io/bundlephobia/minzip/react-use-localstorage.svg?style=flat-square)
+![version](https://img.shields.io/npm/v/react-use-localstorage2.svg?style=flat-square)
 
-Access [Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) using [React hooks](https://reactjs.org/docs/hooks-intro.html).
+> Access [Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) like storage with [React hooks](https://reactjs.org/docs/hooks-intro.html), for Server and Client.
 
 Fork it on CodeSandbox
 [![Edit usestate-useeffect](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/09xj95vxl)
 
 ## How to use it
 
-```javascript
+```typescript jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import useLocalStorage from 'react-use-localstorage';
+import useStorage from 'react-use-localstorage2';
 
 import './styles.css';
 
 function App() {
-  const [item, setItem] = useLocalStorage('name', 'Initial Value');
+  const [item, setItem] = useStorage('name', 'Initial Value');
 
   return (
     <div className="App">
@@ -51,7 +47,15 @@ ReactDOM.render(<App />, rootElement);
 
 ![demo](https://github.com/dance2die/react-use-localstorage/raw/master/react-use-localstorage.gif)
 
-## Changelog
+## Changelog Fork
+
+### 3.4.3
+
+- Breaking changes with null and undefined
+- Allow use any localStorage-like storage, so u can use for Server SSR
+- remove pre-build pack
+
+## Changelog Origin
 
 <details>
 <summary><b>Expand Changelog</b></summary>

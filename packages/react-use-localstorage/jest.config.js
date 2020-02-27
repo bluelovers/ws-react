@@ -1,4 +1,7 @@
 module.exports = {
+	"setupFiles": [
+		"./test/setup.ts"
+	],
 	clearMocks: true,
 	moduleFileExtensions: ['ts', 'js'],
 	testEnvironment: 'node',
