@@ -33,23 +33,23 @@
     "npm:publish": "npm publish",
     "postpublish_": "git commit -m \"publish new version\" .",
     "prepublishOnly": "yarn run ncu && yarn run sort-package-json",
-    "sort-package-json": "npx sort-package-json ./package.json",
+    "sort-package-json": "npx yarn-tool sort",
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc:default": "npx tsc -p tsconfig.json",
     "tsc:esm": "npx tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "ts-type": "^1.2.12"
+    "ts-type": "^1.2.13"
   },
   "devDependencies": {
-    "@material-ui/core": "^4.8.3",
+    "@material-ui/core": "^4.9.4",
     "@types/bluebird": "^3.5.29",
-    "@types/react": "^16.9.17",
-    "react": "^16.12.0"
+    "@types/react": "^16.9.23",
+    "react": "^16.13.0"
   },
   "peerDependencies": {
-    "@material-ui/core": "^4.8.3",
-    "@types/react": "^16.9.17",
-    "react": "^16.12.0"
+    "@material-ui/core": "^4.9.4",
+    "@types/react": "^16.9.23",
+    "react": "^16.13.0"
   }
 }
