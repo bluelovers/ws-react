@@ -1,13 +1,17 @@
 import { Dispatch, useCallback, useEffect, useState, SetStateAction } from 'react';
 import type { IStorageLike, IDispatchSetStateAction, IStateInitialValue, IUnpackStateInitialValue } from './types';
-import { notStorageLike, isNullItem, getStateInitialValue, isSetStateAction, iifNullItem } from './util';
+import {
+	notStorageLike,
+	isNullItem,
+	getStateInitialValue,
+	isSetStateAction,
+	iifNullItem,
+	assertStorageLike,
+} from './util';
 
 export function createStorageHook<S extends string = string>(localStorage: IStorageLike)
 {
-	if (notStorageLike(localStorage))
-	{
-		throw new TypeError(`${localStorage} not a localStorage like object`)
-	}
+	assertStorageLike(localStorage);
 
 	return function useStorage(
 		key: string,

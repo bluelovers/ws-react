@@ -1,5 +1,6 @@
 import { IStorageLike, IStateInitialValue, IStateInitialValueFn, ISetStateActionFn } from './types';
 import { SetStateAction } from 'react';
+import { AssertionError } from 'assert';
 
 export function isNullItem(value: unknown): value is null
 {
@@ -14,6 +15,16 @@ export function iifNullItem<T>(value: T, ...argv: [(null | undefined)?])
 		fallbackValue = argv[0];
 	}
 	return isNullItem(value) ? fallbackValue : value as NonNullable<T>
+}
+
+export function assertStorageLike<S extends IStorageLike>(storage: S): asserts storage is NonNullable<S>
+{
+	if (notStorageLike(storage))
+	{
+		throw new AssertionError({
+			message: `${storage} not a localStorage like object`
+		})
+	}
 }
 
 export function notStorageLike<T extends IStorageLike>(localStorage: T): localStorage is null

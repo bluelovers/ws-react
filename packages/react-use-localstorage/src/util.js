@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const assert_1 = require("assert");
 function isNullItem(value) {
     return typeof value === 'undefined' || value === null;
 }
@@ -12,6 +13,14 @@ function iifNullItem(value, ...argv) {
     return isNullItem(value) ? fallbackValue : value;
 }
 exports.iifNullItem = iifNullItem;
+function assertStorageLike(storage) {
+    if (notStorageLike(storage)) {
+        throw new assert_1.AssertionError({
+            message: `${storage} not a localStorage like object`
+        });
+    }
+}
+exports.assertStorageLike = assertStorageLike;
 function notStorageLike(localStorage) {
     return (isNullItem(localStorage) || typeof localStorage.setItem !== 'function' || typeof localStorage.getItem !== 'function' || typeof localStorage.removeItem !== 'function');
 }

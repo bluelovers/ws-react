@@ -3,9 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = require("react");
 const util_1 = require("./util");
 function createStorageHook(localStorage) {
-    if (util_1.notStorageLike(localStorage)) {
-        throw new TypeError(`${localStorage} not a localStorage like object`);
-    }
+    util_1.assertStorageLike(localStorage);
     return function useStorage(key, initialValue) {
         const [value, setValue] = react_1.useState(() => {
             let value = localStorage.getItem(key);
