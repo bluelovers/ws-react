@@ -1,4 +1,4 @@
-import createStorageHook from '../core';
+import createStorageHook from '../core/v3';
 import { IStateInitialValue, IDispatchSetStateAction } from '../types';
 
 export declare function useStorage<S>(key: string, initialValue?: IStateInitialValue<S>): [S, IDispatchSetStateAction<S>]

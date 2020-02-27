@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = require("react");
-const util_1 = require("./util");
+const util_1 = require("../util");
 function createStorageHook(localStorage) {
     util_1.assertStorageLike(localStorage);
     return function useStorage(key, initialValue) {
@@ -57,4 +57,4 @@ function createStorageHook(localStorage) {
 }
 exports.createStorageHook = createStorageHook;
 exports.default = createStorageHook;
-//# sourceMappingURL=core.js.map
+//# sourceMappingURL=v3.js.map

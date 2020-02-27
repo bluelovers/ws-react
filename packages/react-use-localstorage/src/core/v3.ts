@@ -1,5 +1,5 @@
 import { Dispatch, useCallback, useEffect, useState, SetStateAction } from 'react';
-import type { IStorageLike, IDispatchSetStateAction, IStateInitialValue, IUnpackStateInitialValue } from './types';
+import type { IStorageLike, IDispatchSetStateAction, IStateInitialValue, IUnpackStateInitialValue } from '../types';
 import {
 	notStorageLike,
 	isNullItem,
@@ -7,7 +7,7 @@ import {
 	isSetStateAction,
 	iifNullItem,
 	assertStorageLike,
-} from './util';
+} from '../util';
 
 export function createStorageHook<S extends string = string>(localStorage: IStorageLike)
 {
