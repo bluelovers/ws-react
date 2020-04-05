@@ -39,18 +39,18 @@
     "tsc:esm": "npx tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "ts-type": "^1.2.13"
+    "ts-type": "^1.2.15"
   },
   "devDependencies": {
-    "@material-ui/core": "^4.9.4",
-    "@types/bluebird": "^3.5.29",
-    "@types/react": "^16.9.23",
-    "react": "^16.13.0"
+    "@material-ui/core": "^4.9.9",
+    "@types/bluebird": "^3.5.30",
+    "@types/react": "^16.9.32",
+    "react": "^16.13.1"
   },
   "peerDependencies": {
-    "@material-ui/core": "^4.9.4",
-    "@types/react": "^16.9.23",
-    "react": "^16.13.0"
+    "@material-ui/core": "^4.9.9",
+    "@types/react": "^16.9.32",
+    "react": "^16.13.1"
   },
   "gitHead": "7087b6fcae235888b58ff84599744b33367a669f"
 }
