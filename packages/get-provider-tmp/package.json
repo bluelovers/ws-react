@@ -1,6 +1,6 @@
 {
   "name": "get-provider-tmp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "homepage": "https://github.com/bluelovers/ws-react/tree/master/packages/get-provider-tmp#readme",
   "bugs": {
@@ -29,6 +29,5 @@
   },
   "dependencies": {
     "provider-is-who": "^1.0.1"
-  },
-  "devDependencies": {}
+  }
 }
