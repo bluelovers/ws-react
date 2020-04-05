@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.createStorageHook = void 0;
 const core_1 = require("./src/core");
 Object.defineProperty(exports, "createStorageHook", { enumerable: true, get: function () { return core_1.createStorageHook; } });
 const storage_1 = __importDefault(require("./src/storage"));

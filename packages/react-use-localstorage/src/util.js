@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.getStateInitialValue = exports.isSetStateAction = exports.isStateInitialValue = exports.notStorageLike = exports.assertStorageLike = exports.iifNullItem = exports.isNullItem = void 0;
 const assert_1 = require("assert");
 function isNullItem(value) {
     return typeof value === 'undefined' || value === null;

@@ -19,6 +19,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BR = exports.LinkBreak = void 0;
 const index_1 = __importStar(require("./index"));
 const preact_1 = require("preact");
 exports.LinkBreak = index_1.default(preact_1.createElement, preact_1.Fragment);

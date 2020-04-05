@@ -19,6 +19,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BR = exports.LinkBreak = void 0;
 const index_1 = __importStar(require("./index"));
 const react_1 = require("react");
 exports.LinkBreak = index_1.default(react_1.createElement, react_1.Fragment);

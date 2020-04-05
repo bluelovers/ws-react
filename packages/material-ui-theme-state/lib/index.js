@@ -6,6 +6,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.create = void 0;
 const createMuiTheme_1 = __importDefault(require("@material-ui/core/styles/createMuiTheme"));
 const useTheme_1 = __importDefault(require("@material-ui/core/styles/useTheme"));
 function create(options = {}) {

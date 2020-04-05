@@ -3,6 +3,7 @@
  * Created by user on 2020/1/16.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.createBR = exports.createLinkBreak = void 0;
 const crlf_normalize_1 = require("crlf-normalize");
 function createLinkBreak(createElement, Fragment) {
     return ({ children, noBR, onlyBR, ...props }) => {

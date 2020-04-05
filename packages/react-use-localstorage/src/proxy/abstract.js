@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.AbstractStorageProxy = void 0;
 const util_1 = require("../util");
 const handleMap = new WeakMap();
 class AbstractStorageProxy {
