@@ -1,4 +1,5 @@
 /// <reference types="react" />
+/// <reference types="next" />
 import { IStateInitialValue, IDispatchSetStateAction } from './src/types';
 import { createStorageHook } from './src/core';
 export { createStorageHook };
