@@ -37,6 +37,7 @@ export function extendNextDocumentWithStyledComponents(options?: {
 								sheet,
 							}) ?? (<App {...props} />);
 
+							// @ts-ignore
 							return sheet.collect(root)
 						}
 					};
