@@ -35,35 +35,35 @@
   "scripts": {
     "coverage": "npx nyc yarn run test",
     "lint": "npx eslint **/*.ts",
-    "ncu": "npx yarn-tool ncu -u",
-    "npm:publish": "npm publish",
-    "postpublish_": "git commit -m \"chore(release): publish\" .",
-    "prepublish:lockfile": "npx sync-lockfile .",
-    "prepublishOnly": "yarn run ncu && yarn run sort-package-json && yarn run test",
-    "sort-package-json": "npx yarn-tool sort",
     "test": "jest --coverage",
     "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "npm:publish": "npm publish",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort",
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
+  "dependencies": {
+    "local-storage-fallback": "^4.1.1",
+    "ts-type": "^1.2.16"
+  },
   "devDependencies": {
     "@testing-library/react-hooks": "^3.2.1",
-    "@types/jest": "^25.2.1",
-    "@types/react": "^16.9.32",
-    "@types/react-dom": "^16.9.6",
-    "jest": "^25.2.7",
-    "jest-circus": "^25.2.7",
+    "@types/jest": "^25.2.2",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "jest": "^26.0.1",
+    "jest-circus": "^26.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1",
-    "ts-jest": "^25.3.1"
+    "ts-jest": "^26.0.0"
   },
   "peerDependencies": {
     "react": "^16.13.1"
-  },
-  "dependencies": {
-    "local-storage-fallback": "^4.1.1",
-    "ts-type": "^1.2.15"
   },
   "gitHead": "7087b6fcae235888b58ff84599744b33367a669f"
 }

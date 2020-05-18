@@ -26,30 +26,30 @@
     "lib": "lib"
   },
   "scripts": {
-    "build:tsc": "yarn run tsc:default && yarn run tsc:esm",
     "coverage": "npx nyc yarn run test",
     "lint": "npx eslint **/*.ts",
-    "ncu": "npx yarn-tool ncu -u",
-    "npm:publish": "npm publish",
-    "postpublish_": "git commit -m \"publish new version\" .",
-    "prepublishOnly": "yarn run ncu && yarn run sort-package-json",
-    "sort-package-json": "npx yarn-tool sort",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build:tsc": "yarn run tsc:default && yarn run tsc:esm",
+    "npm:publish": "npm publish",
+    "prepublishOnly": "yarn run ncu && yarn run sort-package-json",
+    "postpublish_": "git commit -m \"publish new version\" .",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort",
     "tsc:default": "npx tsc -p tsconfig.json",
     "tsc:esm": "npx tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "ts-type": "^1.2.15"
+    "ts-type": "^1.2.16"
   },
   "devDependencies": {
-    "@material-ui/core": "^4.9.9",
-    "@types/bluebird": "^3.5.30",
-    "@types/react": "^16.9.32",
+    "@material-ui/core": "^4.9.14",
+    "@types/bluebird": "^3.5.31",
+    "@types/react": "^16.9.35",
     "react": "^16.13.1"
   },
   "peerDependencies": {
-    "@material-ui/core": "^4.9.9",
-    "@types/react": "^16.9.32",
+    "@material-ui/core": "^4.9.14",
+    "@types/react": "^16.9.35",
     "react": "^16.13.1"
   },
   "gitHead": "7087b6fcae235888b58ff84599744b33367a669f"

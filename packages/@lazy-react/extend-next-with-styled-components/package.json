@@ -29,11 +29,11 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "devDependencies": {
-    "@types/styled-components": "^5.0.1",
+    "@types/styled-components": "^5.1.0",
     "styled-components": "^5.1.0"
   },
   "peerDependencies": {
-    "@types/styled-components": "^5.0.1",
+    "@types/styled-components": "^5.1.0",
     "styled-components": "^5.1.0"
   },
   "publishConfig": {

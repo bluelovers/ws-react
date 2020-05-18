@@ -28,15 +28,15 @@
   "scripts": {
     "coverage": "npx nyc yarn run test",
     "lint": "npx eslint **/*.ts",
-    "ncu": "npx yarn-tool ncu -u",
+    "test": "npx ts-node ./test/demo.tsx",
+    "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
     "npm:publish": "npm publish",
-    "postpublish_": "git commit -m \"publish new version\" .",
     "prepublish:lockfile": "npx sync-lockfile .",
     "prepublishOnly": "yarn run ncu && yarn run sort-package-json && yarn run test",
     "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "postpublish_": "git commit -m \"publish new version\" .",
+    "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort",
-    "test": "npx ts-node ./test/demo.tsx",
-    "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
@@ -44,12 +44,12 @@
     "crlf-normalize": "^1.0.3"
   },
   "devDependencies": {
-    "preact": "^10.3.4",
-    "preact-render-to-string": "^5.1.4",
+    "preact": "^10.4.1",
+    "preact-render-to-string": "^5.1.8",
     "react": "^16.13.1"
   },
   "peerDependencies": {
-    "preact": "^10.3.4",
+    "preact": "^10.4.1",
     "react": "^16.13.1"
   },
   "gitHead": "7087b6fcae235888b58ff84599744b33367a669f"
