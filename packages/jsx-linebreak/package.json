@@ -1,6 +1,6 @@
 {
   "name": "jsx-linebreak",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Break a string to lines at newlines, and either wrap each line by a configurable wrapper or append a <br /> to each line.",
   "keywords": [
     "react",

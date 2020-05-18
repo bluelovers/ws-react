@@ -1,6 +1,6 @@
 {
   "name": "@lazy-react/get-next-ctx",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "getNextPageContext",
   "homepage": "https://github.com/bluelovers/ws-react/tree/master/packages/@lazy-react/get-next-ctx#readme",
   "bugs": {
@@ -28,8 +28,6 @@
     "sort-package-json": "npx yarn-tool sort",
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
-  },
-  "devDependencies": {
   },
   "publishConfig": {
     "access": "public"
