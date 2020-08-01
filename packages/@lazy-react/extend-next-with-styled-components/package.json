@@ -28,13 +28,10 @@
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
-  "devDependencies": {
-    "@types/styled-components": "^5.1.0",
-    "styled-components": "^5.1.0"
-  },
+  "devDependencies": {},
   "peerDependencies": {
-    "@types/styled-components": "^5.1.0",
-    "styled-components": "^5.1.0"
+    "@types/styled-components": "^5",
+    "styled-components": "^5"
   },
   "publishConfig": {
     "access": "public"

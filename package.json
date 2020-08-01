@@ -3,6 +3,18 @@
   "version": "1.0.0",
   "private": true,
   "description": "<description>",
+  "keywords": [
+    "lazy-react",
+    "react",
+    "next",
+    "component",
+    "components",
+    "use",
+    "hook",
+    "jsx",
+    "tsx",
+    "dom"
+  ],
   "homepage": "https://github.com/bluelovers/ws-react#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-react/issues"
@@ -31,10 +43,27 @@
   },
   "resolutions": {},
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.19",
-    "@types/node": "^14.0.1"
+    "@bluelovers/tsconfig": "^1.0.20",
+    "@material-ui/core": "^4.11.0",
+    "@testing-library/react-hooks": "^3.4.1",
+    "@types/bluebird": "^3.5.32",
+    "@types/jest": "^26.0.8",
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.44",
+    "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.2",
+    "jest": "^26.2.2",
+    "jest-circus": "^26.2.2",
+    "next": "^9.5.1",
+    "preact": "^10.4.6",
+    "preact-render-to-string": "^5.1.10",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
+    "styled-components": "^5.1.1",
+    "ts-jest": "^26.1.4"
   },
   "peerDependencies": {
-    "lerna": "^3.21.0"
+    "lerna": "^3.22.1"
   }
 }

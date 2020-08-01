@@ -29,11 +29,11 @@
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "dependencies": {
     "@lazy-http/get-user-agent": "^1.0.3",
     "@lazy-react/get-next-ctx": "^1.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
