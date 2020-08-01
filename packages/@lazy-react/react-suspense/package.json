@@ -1,6 +1,6 @@
 {
   "name": "@lazy-react/react-suspense",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "keywords": [
     "suspense",
@@ -38,8 +38,6 @@
     "ncu": "yarn-tool ncu -u",
     "sort-package-json": "yarn-tool sort"
   },
-  "dependencies": {},
-  "devDependencies": {},
   "peerDependencies": {
     "react": "^16"
   },

@@ -1,6 +1,6 @@
 {
   "name": "@lazy-react/extend-next-with-mui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "homepage": "https://github.com/bluelovers/ws-react/tree/master/packages/@lazy-react/extend-next-with-mui#readme",
   "bugs": {
@@ -28,7 +28,6 @@
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
-  "devDependencies": {},
   "peerDependencies": {
     "@material-ui/core": "^4",
     "@types/react": "^16",

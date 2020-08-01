@@ -1,6 +1,6 @@
 {
   "name": "material-ui-theme-state",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "a way for change material-ui theme",
   "keywords": [
     "react",
@@ -41,7 +41,6 @@
   "dependencies": {
     "ts-type": "^1.2.32"
   },
-  "devDependencies": {},
   "peerDependencies": {
     "@material-ui/core": "^4",
     "@types/react": "^16",
