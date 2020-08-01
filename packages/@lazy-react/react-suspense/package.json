@@ -1,7 +1,7 @@
 {
   "name": "@lazy-react/react-suspense",
   "version": "1.0.1",
-  "description": "",
+  "description": "lazy react suspense",
   "keywords": [
     "suspense",
     "lazy-react",
