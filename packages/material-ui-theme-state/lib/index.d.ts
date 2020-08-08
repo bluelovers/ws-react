@@ -12,7 +12,7 @@ export declare function create<T extends Theme = ReturnType<typeof _createMuiThe
     store?: WeakMap<T, IThemeExtra<T, O>["setTheme"]>;
 }): {
     store: WeakMap<T, IThemeExtra<T, O>["setTheme"]>;
-    useTheme(): IThemeExtra<T, O>;
+    useTheme(): Required<IThemeExtra<T, O>>;
     createTheme(options?: O, optsExtra?: {
         setTheme?: Dispatch<SetStateAction<T | O>>;
     }, ...args: object[]): IThemeExtra<T, O>;

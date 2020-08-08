@@ -28,12 +28,16 @@
   "scripts": {
     "coverage": "npx nyc yarn run test",
     "lint": "npx eslint **/*.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\"",
+    "build": "yarn run build:tsc",
     "build:tsc": "yarn run tsc:default && yarn run tsc:esm",
+    "postbuild": "git commit -m \"build: build files\" ./esm ./lib & echo postbuild",
     "npm:publish": "npm publish",
-    "prepublishOnly": "yarn run ncu && yarn run sort-package-json",
+    "preversion": "yarn run test",
+    "prepublishOnly": "echo prepublishOnly",
     "postpublish_": "git commit -m \"publish new version\" .",
     "ncu": "npx yarn-tool ncu -u",
+    "postest": "yarn run build",
     "sort-package-json": "npx yarn-tool sort",
     "tsc:default": "npx tsc -p tsconfig.json",
     "tsc:esm": "npx tsc -p tsconfig.esm.json"

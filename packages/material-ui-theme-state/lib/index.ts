@@ -17,7 +17,7 @@ export function create<T extends Theme = ReturnType<typeof _createMuiTheme>, O e
 	store?: WeakMap<T, IThemeExtra<T, O>["setTheme"]>;
 } = {}): {
 	store: WeakMap<T, IThemeExtra<T, O>["setTheme"]>;
-	useTheme(): IThemeExtra<T, O>;
+	useTheme(): Required<IThemeExtra<T, O>>;
 	createTheme(options?: O, optsExtra?: {
 		setTheme?: Dispatch<SetStateAction<T | O>>;
 	}, ...args: object[]): IThemeExtra<T, O>;
@@ -27,7 +27,7 @@ export function create<T extends Theme = ReturnType<typeof _createMuiTheme>, O e
 
 	store = store || new WeakMap<T, IThemeExtra<T, O>["setTheme"]>();
 
-	const useTheme = function useTheme(): IThemeExtra<T, O>
+	const useTheme = function useTheme(): Required<IThemeExtra<T, O>>
 	{
 		const theme = _useTheme<T>();
 
