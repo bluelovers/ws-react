@@ -1,7 +1,7 @@
 {
   "name": "@lazy-react/prefers-light-mode",
   "version": "1.0.1",
-  "description": "",
+  "description": "detect if the user has requested the system use a light or dark color theme.",
   "keywords": [
     "lazy-react",
     "react",
