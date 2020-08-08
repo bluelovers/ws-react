@@ -1,6 +1,8 @@
-/// <reference types="react" />
+import { RefAttributes, ForwardRefExoticComponent, PropsWithoutRef } from 'react';
 import { LinkProps } from 'next/link';
-import { DefaultComponentProps } from '@material-ui/core/OverridableComponent';
+import { OverridableComponent, DefaultComponentProps } from '@material-ui/core/OverridableComponent';
 import { LinkTypeMap } from '@material-ui/core/Link/Link';
-export declare const NextMuiLink: ({ children, href, as, passHref, prefetch, replace, scroll, shallow, ...props }: DefaultComponentProps<LinkTypeMap<LinkProps>>) => JSX.Element;
+export declare type INextMuiLinkProps = DefaultComponentProps<LinkTypeMap<LinkProps>>;
+export declare const NextMuiLinkWithoutRef: ({ href, as, passHref, prefetch, replace, scroll, shallow, ...props }: INextMuiLinkProps) => JSX.Element;
+export declare const NextMuiLink: ForwardRefExoticComponent<PropsWithoutRef<INextMuiLinkProps> & RefAttributes<OverridableComponent<LinkTypeMap>>>;
 export default NextMuiLink;

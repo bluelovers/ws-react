@@ -1,11 +1,19 @@
-import React, { PropsWithChildren, ReactNode } from 'react';
+import React, {
+	PropsWithChildren,
+	ReactNode,
+	forwardRef,
+	RefAttributes,
+	ForwardRefExoticComponent,
+	PropsWithoutRef,
+} from 'react';
 import NextLink, { LinkProps } from 'next/link';
 import MuiLink from '@material-ui/core/Link';
 import { OverridableComponent, DefaultComponentProps, OverrideProps } from '@material-ui/core/OverridableComponent';
 import { LinkTypeMap } from '@material-ui/core/Link/Link';
 
-export const NextMuiLink = ({
-	children,
+export type INextMuiLinkProps = DefaultComponentProps<LinkTypeMap<LinkProps>>;
+
+export const NextMuiLinkWithoutRef = ({
 
 	href,
 	as,
@@ -16,7 +24,7 @@ export const NextMuiLink = ({
 	shallow,
 
 	...props
-}: DefaultComponentProps<LinkTypeMap<LinkProps>>) =>
+}: INextMuiLinkProps) =>
 {
 	passHref = passHref ?? true;
 
@@ -29,10 +37,11 @@ export const NextMuiLink = ({
 		scroll,
 		shallow,
 	}}>
-		<MuiLink {...props}>
-			{children}
-		</MuiLink>
+		<MuiLink {...props}/>
 	</NextLink>
 }
+
+// @ts-ignore
+export const NextMuiLink: ForwardRefExoticComponent<PropsWithoutRef<INextMuiLinkProps> & RefAttributes<OverridableComponent<LinkTypeMap>>> = forwardRef<OverridableComponent<LinkTypeMap>, INextMuiLinkProps>((props: INextMuiLinkProps, ref) => <NextMuiLinkWithoutRef {...props} ref={ref}/>);
 
 export default NextMuiLink

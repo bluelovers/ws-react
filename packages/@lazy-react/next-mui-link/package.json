@@ -1,11 +1,12 @@
 {
   "name": "@lazy-react/next-mui-link",
   "version": "1.0.1",
-  "description": "",
+  "description": "Using Next.js Link Component with Material UI",
   "keywords": [
     "lazy-react",
     "react",
     "next",
+    "link",
     "material-ui",
     "mui",
     "component",
