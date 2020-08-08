@@ -21,6 +21,7 @@ export function create(options = {}) {
             const setTheme = async function (value, autoSpread) {
                 if (autoSpread && typeof value === 'function') {
                     return _setTheme(old => {
+                        // @ts-ignore
                         let n = value(old);
                         if (n && typeof n === 'object') {
                             return {
@@ -30,6 +31,7 @@ export function create(options = {}) {
                         return n;
                     });
                 }
+                // @ts-ignore
                 return _setTheme(value);
             };
             store.set(theme, setTheme);

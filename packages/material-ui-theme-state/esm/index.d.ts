@@ -6,7 +6,7 @@ import { ITSResolvable } from 'ts-type';
 import { Dispatch, SetStateAction } from 'react';
 export interface IThemeExtra<T extends Theme = Theme, O extends ThemeOptions = ThemeOptions> {
     theme: T;
-    setTheme?(theme: SetStateAction<T | O>, autoSpread?: boolean): ITSResolvable<void | T | O>;
+    setTheme?(theme: SetStateAction<Required<T> | Required<O>>, autoSpread?: boolean): ITSResolvable<void | T | O>;
 }
 export declare function create<T extends Theme = ReturnType<typeof _createMuiTheme>, O extends ThemeOptions = Parameters<typeof _createMuiTheme>[0]>(options?: {
     store?: WeakMap<T, IThemeExtra<T, O>["setTheme"]>;
