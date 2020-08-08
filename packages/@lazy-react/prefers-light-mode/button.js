@@ -8,7 +8,7 @@ const react_1 = __importDefault(require("react"));
 const global_1 = require("material-ui-theme-state/lib/global");
 const Button_1 = __importDefault(require("@material-ui/core/Button"));
 function ButtonTheme(props) {
-    const { theme, setTheme } = global_1.useTheme();
+    const { setTheme } = global_1.useTheme();
     let click = () => {
         setTheme(theme => {
             theme.palette.type = (theme.palette.type !== 'light') ? 'light' : 'dark';

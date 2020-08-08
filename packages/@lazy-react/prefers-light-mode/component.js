@@ -28,9 +28,7 @@ const mergeThemeSetting_1 = require("./lib/mergeThemeSetting");
 function PrefersLightMode({ config, value, defaultValue, ...props }) {
     var _a;
     let bool = (_a = value !== null && value !== void 0 ? value : prefersLightMode_1.prefersLightMode()) !== null && _a !== void 0 ? _a : defaultValue;
-    let theme;
-    let setTheme;
-    ([theme, setTheme] = react_1.useState(mergeThemeSetting_1.mergeThemeSetting(bool, config)));
+    let [theme, setTheme] = react_1.useState(mergeThemeSetting_1.mergeThemeSetting(bool, config));
     if (typeof window !== "undefined") {
         react_1.useEffect(() => {
             const lazy = () => {

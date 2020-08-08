@@ -18,10 +18,8 @@ export function PrefersLightMode({
 }>)
 {
 	let bool = value ?? prefersLightMode() ?? defaultValue;
-	let theme: ThemeOptions | Theme;
-	let setTheme: IThemeExtra["setTheme"];
 
-	([theme, setTheme] = useState(mergeThemeSetting(bool, config)));
+	let [theme, setTheme] = useState(mergeThemeSetting(bool, config));
 
 	if (typeof window !== "undefined")
 	{

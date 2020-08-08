@@ -7,7 +7,7 @@ export function ButtonTheme(props: ButtonTypeMap["props"] & {
 	children: ReactNode,
 })
 {
-	const { theme, setTheme } = useTheme();
+	const { setTheme } = useTheme();
 
 	let click = () =>
 	{
