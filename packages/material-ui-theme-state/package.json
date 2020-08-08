@@ -37,7 +37,7 @@
     "prepublishOnly": "echo prepublishOnly",
     "postpublish_": "git commit -m \"publish new version\" .",
     "ncu": "npx yarn-tool ncu -u",
-    "postest": "yarn run build",
+    "posttest": "yarn run build",
     "sort-package-json": "npx yarn-tool sort",
     "tsc:default": "npx tsc -p tsconfig.json",
     "tsc:esm": "npx tsc -p tsconfig.esm.json"
