@@ -13,6 +13,7 @@ export function ButtonTheme(props: ButtonTypeMap["props"] & {
 	{
 		setTheme(theme => {
 
+			// @ts-ignore
 			theme.palette.type = (theme.palette.type !== 'light') ? 'light' : 'dark';
 
 			return theme;

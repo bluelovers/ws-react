@@ -33,6 +33,7 @@ function PrefersLightMode({ config, value, defaultValue, ...props }) {
         react_1.useEffect(() => {
             const lazy = () => {
                 setTheme(theme => {
+                    // @ts-ignore
                     theme.palette.type = bool ? 'light' : 'dark';
                     return theme;
                 });

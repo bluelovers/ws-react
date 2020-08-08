@@ -11,6 +11,7 @@ function ButtonTheme(props) {
     const { setTheme } = global_1.useTheme();
     let click = () => {
         setTheme(theme => {
+            // @ts-ignore
             theme.palette.type = (theme.palette.type !== 'light') ? 'light' : 'dark';
             return theme;
         }, true);

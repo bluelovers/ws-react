@@ -29,6 +29,7 @@ export function PrefersLightMode({
 			{
 				setTheme(theme => {
 
+					// @ts-ignore
 					theme.palette.type = bool ? 'light' : 'dark';
 
 					return theme;
