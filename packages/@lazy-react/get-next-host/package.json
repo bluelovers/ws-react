@@ -1,6 +1,6 @@
 {
   "name": "@lazy-react/get-next-host",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "keywords": [
     "lazy-react",
@@ -44,7 +44,6 @@
     "is-req-https2": "^1.0.7",
     "original-url2": "^1.2.13"
   },
-  "devDependencies": {},
   "peerDependencies": {
     "tslib": "^2"
   },

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.11](https://github.com/bluelovers/ws-react/compare/react-use-localstorage2@4.0.10...react-use-localstorage2@4.0.11) (2020-10-22)
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([a76beb3](https://github.com/bluelovers/ws-react/commit/a76beb37961f79e1f21a0a53f8845c1f5a28a698))
+
+
+
+
+
 ## [4.0.10](https://github.com/bluelovers/ws-react/compare/react-use-localstorage2@4.0.9...react-use-localstorage2@4.0.10) (2020-10-22)
 
 
