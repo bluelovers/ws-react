@@ -39,7 +39,7 @@
     "sort-package-json": "yarn-tool sort"
   },
   "peerDependencies": {
-    "react": "^16",
+    "react": "^17",
     "tslib": "^2"
   },
   "publishConfig": {

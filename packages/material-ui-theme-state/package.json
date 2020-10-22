@@ -43,12 +43,12 @@
     "tsc:esm": "npx tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "ts-type": "^1.2.32"
+    "ts-type": "^1.2.34"
   },
   "peerDependencies": {
     "@material-ui/core": "^4",
     "@types/react": "^16",
-    "react": "^16",
+    "react": "^17",
     "tslib": "^2"
   },
   "gitHead": "7087b6fcae235888b58ff84599744b33367a669f"
