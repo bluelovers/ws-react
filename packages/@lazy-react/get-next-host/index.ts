@@ -8,6 +8,11 @@ export function getNextHost<T extends AppContext | DocumentContext | NextPageCon
 {
 	const ctx = getNextPageContext(_ctx);
 
+	if (!ctx.req)
+	{
+		return null
+	}
+
 	const secure = isReqHttps(ctx.req);
 	let hostname: string;
 
