@@ -2,13 +2,11 @@
 /**
  * Created by user on 2020/1/13.
  */
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.create = void 0;
-const createMuiTheme_1 = __importDefault(require("@material-ui/core/styles/createMuiTheme"));
-const useTheme_1 = __importDefault(require("@material-ui/core/styles/useTheme"));
+const tslib_1 = require("tslib");
+const createMuiTheme_1 = tslib_1.__importDefault(require("@material-ui/core/styles/createMuiTheme"));
+const useTheme_1 = tslib_1.__importDefault(require("@material-ui/core/styles/useTheme"));
 function create(options = {}) {
     let { store } = options;
     store = store || new WeakMap();
