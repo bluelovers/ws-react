@@ -45,7 +45,8 @@
   },
   "peerDependencies": {
     "preact": "^10",
-    "react": "^16"
+    "react": "^16",
+    "tslib": "^2"
   },
   "gitHead": "7087b6fcae235888b58ff84599744b33367a669f"
 }

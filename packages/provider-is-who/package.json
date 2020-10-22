@@ -29,5 +29,8 @@
   },
   "dependencies": {
     "@types/node": "*"
+  },
+  "peerDependencies": {
+    "tslib": "^2"
   }
 }

@@ -1,11 +1,9 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getNextUserAgent = void 0;
-const get_next_ctx_1 = __importDefault(require("@lazy-react/get-next-ctx"));
-const get_user_agent_1 = __importDefault(require("@lazy-http/get-user-agent"));
+const tslib_1 = require("tslib");
+const get_next_ctx_1 = tslib_1.__importDefault(require("@lazy-react/get-next-ctx"));
+const get_user_agent_1 = tslib_1.__importDefault(require("@lazy-http/get-user-agent"));
 function getNextUserAgent(ctx) {
     var _a, _b;
     return get_user_agent_1.default({

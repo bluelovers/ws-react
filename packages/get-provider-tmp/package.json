@@ -29,5 +29,8 @@
   },
   "dependencies": {
     "provider-is-who": "^1.0.2"
+  },
+  "peerDependencies": {
+    "tslib": "^2"
   }
 }

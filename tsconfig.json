@@ -3,6 +3,7 @@
   "compilerOptions": {
     "jsx": "react",
     "sourceMap": true,
-    "inlineSourceMap": false
+    "inlineSourceMap": false,
+    "importHelpers": true
   }
 }

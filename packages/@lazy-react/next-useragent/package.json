@@ -35,5 +35,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "peerDependencies": {
+    "tslib": "^2"
   }
 }

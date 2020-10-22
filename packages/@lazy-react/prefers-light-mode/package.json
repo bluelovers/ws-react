@@ -46,7 +46,8 @@
   "peerDependencies": {
     "@material-ui/core": "^4",
     "@material-ui/utils": "^4",
-    "react": "^16"
+    "react": "^16",
+    "tslib": "^2"
   },
   "publishConfig": {
     "access": "public"

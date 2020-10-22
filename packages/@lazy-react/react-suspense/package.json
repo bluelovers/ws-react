@@ -39,7 +39,8 @@
     "sort-package-json": "yarn-tool sort"
   },
   "peerDependencies": {
-    "react": "^16"
+    "react": "^16",
+    "tslib": "^2"
   },
   "publishConfig": {
     "access": "public"
