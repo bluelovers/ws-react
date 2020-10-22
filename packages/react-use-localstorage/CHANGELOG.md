@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.10](https://github.com/bluelovers/ws-react/compare/react-use-localstorage2@4.0.9...react-use-localstorage2@4.0.10) (2020-10-22)
+
+
+### 🛠　Build System
+
+* **ts:** use importHelpers ([b773526](https://github.com/bluelovers/ws-react/commit/b7735267ce68e73a469feb384ac9ef7982ab741b))
+
+
+
+
+
 ## [4.0.9](https://github.com/bluelovers/ws-react/compare/react-use-localstorage2@4.0.8...react-use-localstorage2@4.0.9) (2020-08-01)
 
 
