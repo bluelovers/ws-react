@@ -10,9 +10,12 @@ export function mergeThemeSetting<T extends ThemeOptions | Theme>(bool?: boolean
 
 	theme = merge(theme, {
 		palette: {
+			/*
 			primary: blue,
 			secondary: purple,
+			 */
 		},
+		/*
 		typography: {
 			fontFamily: 'JetBrains Mono, Consolas',
 		},
@@ -30,6 +33,7 @@ export function mergeThemeSetting<T extends ThemeOptions | Theme>(bool?: boolean
 				},
 			},
 		},
+		 */
 	})
 
 	theme.palette.type = bool ? 'light' : 'dark'
