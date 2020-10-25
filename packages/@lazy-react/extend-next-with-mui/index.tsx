@@ -51,10 +51,7 @@ export function extendNextDocumentWithMui(options?: {
 
 		return {
 			...initialProps,
-			styles: (<>
-				{sheet.getStyleElement()}
-				{initialProps.styles}
-			</>),
+			styles: [sheet.getStyleElement(), ...React.Children.toArray(initialProps.styles)],
 		}
 	}
 

@@ -35,9 +35,7 @@ function extendNextDocumentWithMui(options) {
         });
         return {
             ...initialProps,
-            styles: (react_1.default.createElement(react_1.default.Fragment, null,
-                sheet.getStyleElement(),
-                initialProps.styles)),
+            styles: [sheet.getStyleElement(), ...react_1.default.Children.toArray(initialProps.styles)],
         };
     }
     newDocument.getInitialProps = getInitialProps;
