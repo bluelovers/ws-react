@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.7](https://github.com/bluelovers/ws-react/compare/@lazy-react/next-mui-link@1.0.6...@lazy-react/next-mui-link@1.0.7) (2020-10-25)
+
+
+### 🔖　Miscellaneous
+
+* . ([2be0d73](https://github.com/bluelovers/ws-react/commit/2be0d736afda906c853284fc04f19447bebacebb))
+
+
+
+
+
 ## [1.0.6](https://github.com/bluelovers/ws-react/compare/@lazy-react/next-mui-link@1.0.5...@lazy-react/next-mui-link@1.0.6) (2020-10-25)
 
 

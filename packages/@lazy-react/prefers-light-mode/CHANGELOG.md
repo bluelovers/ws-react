@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.11](https://github.com/bluelovers/ws-react/compare/@lazy-react/prefers-light-mode@1.0.10...@lazy-react/prefers-light-mode@1.0.11) (2020-10-25)
+
+
+### 🐛　Bug Fixes
+
+* do not overwrite font setting ([e2b4cb2](https://github.com/bluelovers/ws-react/commit/e2b4cb2cdd4dad3389565d1eb00e5f061a5a4927))
+
+
+
+
+
 ## [1.0.10](https://github.com/bluelovers/ws-react/compare/@lazy-react/prefers-light-mode@1.0.9...@lazy-react/prefers-light-mode@1.0.10) (2020-10-25)
 
 **Note:** Version bump only for package @lazy-react/prefers-light-mode
