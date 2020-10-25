@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 const react_1 = tslib_1.__importStar(require("react"));
 const link_1 = tslib_1.__importDefault(require("next/link"));
 const Link_1 = tslib_1.__importDefault(require("@material-ui/core/Link"));
-exports.NextMuiLinkWithoutRef = ({ href, as, passHref, prefetch, replace, scroll, shallow, ...props }) => {
+const NextMuiLinkWithoutRef = ({ href, as, passHref, prefetch, replace, scroll, shallow, ...props }) => {
     passHref = passHref !== null && passHref !== void 0 ? passHref : true;
     return react_1.default.createElement(link_1.default, Object.assign({}, {
         href,
@@ -18,6 +18,7 @@ exports.NextMuiLinkWithoutRef = ({ href, as, passHref, prefetch, replace, scroll
     }),
         react_1.default.createElement(Link_1.default, Object.assign({}, props)));
 };
+exports.NextMuiLinkWithoutRef = NextMuiLinkWithoutRef;
 // @ts-ignore
 exports.NextMuiLink = react_1.forwardRef((props, ref) => react_1.default.createElement(exports.NextMuiLinkWithoutRef, Object.assign({}, props, { ref: ref })));
 exports.default = exports.NextMuiLink;
