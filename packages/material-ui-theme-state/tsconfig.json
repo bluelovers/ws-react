@@ -5,6 +5,7 @@
     "noImplicitAny": true,
     "inlineSourceMap": false,
     "sourceMap": true,
+    "importHelpers": true,
     "rootDir": "./lib"
   },
   "exclude": [

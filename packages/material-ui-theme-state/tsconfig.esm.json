@@ -8,6 +8,7 @@
     "skipLibCheck": true,
     "noImplicitAny": true,
     "inlineSourceMap": false,
+    "importHelpers": true,
     "sourceMap": true
   },
   "exclude": [
