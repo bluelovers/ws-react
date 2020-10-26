@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.8](https://github.com/bluelovers/ws-react/compare/@lazy-react/react-suspense@1.0.7...@lazy-react/react-suspense@1.0.8) (2020-10-26)
+
+
+### ✨　Features
+
+* update support content for ssr render ([da526ae](https://github.com/bluelovers/ws-react/commit/da526ae82304473246a3f00e7bf565f14b3867c5))
+
+
+
+
+
 ## [1.0.7](https://github.com/bluelovers/ws-react/compare/@lazy-react/react-suspense@1.0.6...@lazy-react/react-suspense@1.0.7) (2020-10-25)
 
 
