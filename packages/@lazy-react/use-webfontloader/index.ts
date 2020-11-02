@@ -1,7 +1,8 @@
 import { Config } from 'webfontloader'
 import WebFontLoader from 'webfontloader'
+import { memoize } from 'lodash';
 
-export function useWebFontLoader(config: Config | ((wf: typeof WebFontLoader) => Config))
+export const useWebFontLoader = memoize(function useWebFontLoader(config: Config | ((wf: typeof WebFontLoader) => Config))
 {
 	if (typeof window !== 'undefined')
 	{
@@ -16,6 +17,6 @@ export function useWebFontLoader(config: Config | ((wf: typeof WebFontLoader) =>
 			WebFontLoader.load(config);
 		}
 	}
-}
+})
 
 export default useWebFontLoader
