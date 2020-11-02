@@ -40,10 +40,13 @@
     "sort-package-json": "yarn-tool sort"
   },
   "peerDependencies": {
+    "lodash": "*",
     "react": "*",
     "webfontloader": "*"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "dependencies": {},
+  "devDependencies": {}
 }
