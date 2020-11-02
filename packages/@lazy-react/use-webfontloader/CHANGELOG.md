@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://github.com/bluelovers/ws-react/compare/@lazy-react/use-webfontloader@1.0.5...@lazy-react/use-webfontloader@1.0.6) (2020-11-02)
+
+
+### ✨　Features
+
+* lodash.memoize ([b3fa9b7](https://github.com/bluelovers/ws-react/commit/b3fa9b739d9fb14a8fe5a75ae014a257bbf43999))
+
+
+
+
+
 ## [1.0.5](https://github.com/bluelovers/ws-react/compare/@lazy-react/use-webfontloader@1.0.4...@lazy-react/use-webfontloader@1.0.5) (2020-11-02)
 
 
