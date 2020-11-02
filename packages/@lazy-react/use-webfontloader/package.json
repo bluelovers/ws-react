@@ -1,6 +1,6 @@
 {
   "name": "@lazy-react/use-webfontloader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "use webfontloader and avoid ssr error",
   "keywords": [
     "lazy-react",
