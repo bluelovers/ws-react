@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.useWebFontLoader = void 0;
-function useWebFontLoader({ config, }) {
+function useWebFontLoader(config) {
     if (typeof window !== 'undefined') {
         const WebFontLoader = require('webfontloader');
         if (typeof config === 'function') {

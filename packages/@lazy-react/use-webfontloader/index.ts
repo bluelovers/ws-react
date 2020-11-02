@@ -1,11 +1,7 @@
 import { Config } from 'webfontloader'
 import WebFontLoader from 'webfontloader'
 
-export function useWebFontLoader({
-	config,
-}: {
-	config: Config | ((wf: typeof WebFontLoader) => Config),
-})
+export function useWebFontLoader(config: Config | ((wf: typeof WebFontLoader) => Config))
 {
 	if (typeof window !== 'undefined')
 	{
