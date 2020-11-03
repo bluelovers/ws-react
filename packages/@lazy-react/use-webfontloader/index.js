@@ -1,17 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.useWebFontLoader = void 0;
-const lodash_1 = require("lodash");
-exports.useWebFontLoader = lodash_1.memoize(function useWebFontLoader(config) {
-    if (typeof window !== 'undefined') {
-        const WebFontLoader = require('webfontloader');
-        if (typeof config === 'function') {
-            WebFontLoader.load(config(WebFontLoader));
-        }
-        else {
-            WebFontLoader.load(config);
-        }
-    }
-});
-exports.default = exports.useWebFontLoader;
+const core_1 = require("./core");
+function useWebFontLoader() {
+    return core_1.useWebFontLoaderCore;
+}
+exports.useWebFontLoader = useWebFontLoader;
+exports.default = useWebFontLoader;
 //# sourceMappingURL=index.js.map

@@ -1,6 +1,9 @@
 import { useCallback, useMemo } from 'react';
-import _useWebFontLoader from './index';
+import { useWebFontLoaderCore } from './core';
 
-export const useWebFontLoader = useCallback(_useWebFontLoader, [])
+export function useWebFontLoader()
+{
+	return useCallback(useWebFontLoaderCore, [])
+}
 
 export default useWebFontLoader

@@ -1,5 +1,3 @@
-/// <reference types="lodash" />
-import { Config } from 'webfontloader';
-import WebFontLoader from 'webfontloader';
-export declare const useWebFontLoader: ((config: Config | ((wf: typeof WebFontLoader) => Config)) => void) & import("lodash").MemoizedFunction;
+import { useWebFontLoaderCore } from './core';
+export declare function useWebFontLoader(): typeof useWebFontLoaderCore;
 export default useWebFontLoader;

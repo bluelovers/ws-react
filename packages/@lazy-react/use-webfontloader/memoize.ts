@@ -1,6 +1,11 @@
 import { memoize } from 'lodash';
-import _useWebFontLoader from './index';
+import { useWebFontLoaderCore } from './core';
 
-export const useWebFontLoader = memoize(_useWebFontLoader)
+const fn = memoize(useWebFontLoaderCore)
+
+export function useWebFontLoader()
+{
+	return fn
+}
 
 export default useWebFontLoader
