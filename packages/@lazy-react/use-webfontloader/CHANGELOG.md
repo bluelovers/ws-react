@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.7](https://github.com/bluelovers/ws-react/compare/@lazy-react/use-webfontloader@1.0.6...@lazy-react/use-webfontloader@1.0.7) (2020-11-03)
+
+
+### 📦　Code Refactoring
+
+* fix react ([0309c1d](https://github.com/bluelovers/ws-react/commit/0309c1d66a343e530aa19a03670c13d7cca8e7a9))
+
+
+
+
+
 ## [1.0.6](https://github.com/bluelovers/ws-react/compare/@lazy-react/use-webfontloader@1.0.5...@lazy-react/use-webfontloader@1.0.6) (2020-11-02)
 
 
