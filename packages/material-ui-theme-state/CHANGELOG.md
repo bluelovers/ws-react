@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.30](https://github.com/bluelovers/ws-react/compare/material-ui-theme-state@1.0.29...material-ui-theme-state@1.0.30) (2020-11-04)
+
+
+### 🛠　Build System
+
+* build files ([a194209](https://github.com/bluelovers/ws-react/commit/a19420940c8d6d45f426449a5ee05390f7eb6026))
+
+
+### 🔖　Miscellaneous
+
+* Revert "fix: ReferenceError: setTheme is not defined" ([b129a11](https://github.com/bluelovers/ws-react/commit/b129a113938eb5d6cd686621496e33a722914012))
+
+
+
+
+
 ## [1.0.29](https://github.com/bluelovers/ws-react/compare/material-ui-theme-state@1.0.28...material-ui-theme-state@1.0.29) (2020-11-04)
 
 
