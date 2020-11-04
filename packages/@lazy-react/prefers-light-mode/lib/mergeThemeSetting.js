@@ -12,6 +12,25 @@ function mergeThemeSetting(bool, theme = {}) {
         secondary: purple,
          */
         },
+        /*
+        typography: {
+            fontFamily: 'JetBrains Mono, Consolas',
+        },
+        overrides: {
+            MuiCssBaseline: {
+                '@global': {
+                    '@font-face': [
+                        {
+                            '-webkit-font-feature-settings': '"liga" on, "calt" on',
+                            '-webkit-font-smoothing': 'antialiased',
+                            textRendering: 'optimizeLegibility',
+                            fontFamily: ['JetBrains Mono', "Roboto", "Helvetica", "Arial", 'sans-serif'].join(','),
+                        },
+                    ],
+                },
+            },
+        },
+         */
     });
     theme.palette.type = bool ? 'light' : 'dark';
     return theme;
