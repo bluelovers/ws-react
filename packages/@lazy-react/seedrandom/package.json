@@ -1,6 +1,6 @@
 {
   "name": "@lazy-react/seedrandom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "keywords": [
     "lazy-react",
@@ -39,7 +39,6 @@
     "ncu": "yarn-tool ncu -u",
     "sort-package-json": "yarn-tool sort"
   },
-  "dependencies": {},
   "devDependencies": {
     "@types/nanoid": "^2.1.0",
     "@types/seedrandom": "^2.4.28"
