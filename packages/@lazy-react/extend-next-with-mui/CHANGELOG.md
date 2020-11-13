@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.7](https://github.com/bluelovers/ws-react/compare/@lazy-react/extend-next-with-mui@1.0.6...@lazy-react/extend-next-with-mui@1.0.7) (2020-11-13)
+
+
+### 🐛　Bug Fixes
+
+* extendNextDocumentWithMui ([816ceff](https://github.com/bluelovers/ws-react/commit/816ceff74d611aa977e356e326d1c94dadc777f7))
+
+
+### 🔖　Miscellaneous
+
+* . ([a83d45d](https://github.com/bluelovers/ws-react/commit/a83d45d0565e608bd03b1f4a3e5bdef320ea619c))
+
+
+
+
+
 ## [1.0.6](https://github.com/bluelovers/ws-react/compare/@lazy-react/extend-next-with-mui@1.0.5...@lazy-react/extend-next-with-mui@1.0.6) (2020-10-25)
 
 
