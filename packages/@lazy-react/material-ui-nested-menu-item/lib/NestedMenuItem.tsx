@@ -1,6 +1,6 @@
+import React from 'react';
 import NestedMenuItemOld, { NestedMenuItemProps } from 'material-ui-nested-menu-item';
 import useNestedMenuContext from './useNestedMenuContext';
-import React from 'react';
 
 export function NestedMenuItem(prop: Omit<NestedMenuItemProps, "parentMenuOpen" | "onClick">)
 {
