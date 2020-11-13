@@ -43,4 +43,4 @@ function extendNextDocumentWithMui(options) {
 }
 exports.extendNextDocumentWithMui = extendNextDocumentWithMui;
 exports.default = extendNextDocumentWithMui;
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=index-old.js.map
