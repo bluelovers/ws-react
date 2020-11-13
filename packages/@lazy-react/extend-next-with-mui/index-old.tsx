@@ -4,6 +4,9 @@ import { ServerStyleSheets, ThemeProvider, MuiThemeProvider } from '@material-ui
 import createMuiTheme, { Theme } from '@material-ui/core/styles/createMuiTheme';
 import { Enhancer, NextComponentType, RenderPageResult } from 'next/dist/next-server/lib/utils';
 
+/**
+ * @deprecated
+ */
 export function extendNextDocumentWithMui(options?: {
 	newDocument?: typeof Document,
 	Document?: typeof Document,
@@ -60,4 +63,7 @@ export function extendNextDocumentWithMui(options?: {
 	return newDocument
 }
 
+/**
+ * @deprecated
+ */
 export default extendNextDocumentWithMui

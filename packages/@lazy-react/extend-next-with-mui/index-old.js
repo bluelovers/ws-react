@@ -6,6 +6,9 @@ const react_1 = tslib_1.__importDefault(require("react"));
 const document_1 = tslib_1.__importDefault(require("next/document"));
 const styles_1 = require("@material-ui/core/styles");
 const createMuiTheme_1 = tslib_1.__importDefault(require("@material-ui/core/styles/createMuiTheme"));
+/**
+ * @deprecated
+ */
 function extendNextDocumentWithMui(options) {
     var _a, _b;
     const oldDocument = (_a = options === null || options === void 0 ? void 0 : options.Document) !== null && _a !== void 0 ? _a : document_1.default;
@@ -42,5 +45,8 @@ function extendNextDocumentWithMui(options) {
     return newDocument;
 }
 exports.extendNextDocumentWithMui = extendNextDocumentWithMui;
+/**
+ * @deprecated
+ */
 exports.default = extendNextDocumentWithMui;
 //# sourceMappingURL=index-old.js.map

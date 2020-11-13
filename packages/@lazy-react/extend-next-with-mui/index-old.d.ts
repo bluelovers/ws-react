@@ -3,6 +3,9 @@ import Document from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
 import { Theme } from '@material-ui/core/styles/createMuiTheme';
 import { NextComponentType, RenderPageResult } from 'next/dist/next-server/lib/utils';
+/**
+ * @deprecated
+ */
 export declare function extendNextDocumentWithMui(options?: {
     newDocument?: typeof Document;
     Document?: typeof Document;
@@ -13,4 +16,7 @@ export declare function extendNextDocumentWithMui(options?: {
         sheet: ServerStyleSheets;
     }): RenderPageResult;
 }): typeof Document;
+/**
+ * @deprecated
+ */
 export default extendNextDocumentWithMui;
