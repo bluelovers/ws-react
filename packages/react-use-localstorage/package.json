@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "local-storage-fallback": "^4.1.1",
-    "ts-type": "^1.2.34"
+    "ts-type": "^3.0.1"
   },
   "peerDependencies": {
     "react": "^17",

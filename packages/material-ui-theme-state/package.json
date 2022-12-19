@@ -43,7 +43,7 @@
     "tsc:esm": "npx tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "ts-type": "^1.2.34"
+    "ts-type": "^3.0.1"
   },
   "peerDependencies": {
     "@material-ui/core": "^4",
