@@ -3,7 +3,7 @@
  */
 
 import _createMuiTheme, { ThemeOptions, Theme } from '@material-ui/core/styles/createMuiTheme';
-import { ITSResolvable } from 'ts-type';
+import { ITSResolvable } from 'ts-type/lib/generic';
 import _useTheme from '@material-ui/core/styles/useTheme';
 import { Dispatch, SetStateAction } from 'react';
 
@@ -45,7 +45,7 @@ export function create<T extends Theme = ReturnType<typeof _createMuiTheme>, O e
 	{
 		const theme = _createMuiTheme(options, optsExtra, ...args) as T;
 
-		if (optsExtra && optsExtra.setTheme)
+		if (optsExtra?.setTheme)
 		{
 			let { setTheme: _setTheme } = optsExtra;
 

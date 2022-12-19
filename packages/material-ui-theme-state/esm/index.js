@@ -16,7 +16,7 @@ export function create(options = {}) {
     };
     const createTheme = function createTheme(options, optsExtra, ...args) {
         const theme = _createMuiTheme(options, optsExtra, ...args);
-        if (optsExtra && optsExtra.setTheme) {
+        if (optsExtra === null || optsExtra === void 0 ? void 0 : optsExtra.setTheme) {
             let { setTheme: _setTheme } = optsExtra;
             const setTheme = async function (value, autoSpread) {
                 if (autoSpread && typeof value === 'function') {

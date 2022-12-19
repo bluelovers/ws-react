@@ -11,7 +11,7 @@ function create(options = {}) {
     let { store } = options;
     store = store || new WeakMap();
     const useTheme = function useTheme() {
-        const theme = useTheme_1.default();
+        const theme = (0, useTheme_1.default)();
         let setTheme = store.get(theme);
         return {
             theme,
@@ -19,8 +19,8 @@ function create(options = {}) {
         };
     };
     const createTheme = function createTheme(options, optsExtra, ...args) {
-        const theme = createMuiTheme_1.default(options, optsExtra, ...args);
-        if (optsExtra && optsExtra.setTheme) {
+        const theme = (0, createMuiTheme_1.default)(options, optsExtra, ...args);
+        if (optsExtra === null || optsExtra === void 0 ? void 0 : optsExtra.setTheme) {
             let { setTheme: _setTheme } = optsExtra;
             const setTheme = async function (value, autoSpread) {
                 if (autoSpread && typeof value === 'function') {

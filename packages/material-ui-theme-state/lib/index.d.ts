@@ -2,7 +2,7 @@
  * Created by user on 2020/1/13.
  */
 import _createMuiTheme, { ThemeOptions, Theme } from '@material-ui/core/styles/createMuiTheme';
-import { ITSResolvable } from 'ts-type';
+import { ITSResolvable } from 'ts-type/lib/generic';
 import { Dispatch, SetStateAction } from 'react';
 export interface IThemeExtra<T extends Theme = Theme, O extends ThemeOptions = ThemeOptions> {
     theme: T;
