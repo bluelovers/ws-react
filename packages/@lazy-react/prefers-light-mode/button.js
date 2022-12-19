@@ -14,7 +14,7 @@ function ButtonTheme(props) {
             return theme;
         }, true);
     };
-    return (react_1.default.createElement(Button_1.default, Object.assign({ variant: "contained", color: "secondary" }, props, { onClick: click })));
+    return (react_1.default.createElement(Button_1.default, { variant: "contained", color: "secondary", ...props, onClick: click }));
 }
 exports.ButtonTheme = ButtonTheme;
 exports.default = ButtonTheme;

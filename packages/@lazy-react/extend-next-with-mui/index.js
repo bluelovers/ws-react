@@ -19,7 +19,7 @@ function extendNextDocumentWithMui(oldDocument, overwrite) {
         const sheets = new ServerStyleSheets_1.default();
         const originalRenderPage = ctx.renderPage;
         ctx.renderPage = () => originalRenderPage({
-            enhanceApp: (App) => (props) => sheets.collect(react_1.default.createElement(App, Object.assign({}, props))),
+            enhanceApp: (App) => (props) => sheets.collect(react_1.default.createElement(App, { ...props })),
         });
         const initialProps = await originalGetInitialProps.call(this, ctx);
         initialProps.styles = [

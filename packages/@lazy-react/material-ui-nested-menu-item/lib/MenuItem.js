@@ -7,7 +7,7 @@ const useNestedMenuContext_1 = tslib_1.__importDefault(require("./useNestedMenuC
 const react_1 = tslib_1.__importDefault(require("react"));
 function MenuItem(props) {
     const state = useNestedMenuContext_1.default();
-    return react_1.default.createElement(MenuItem_1.default, Object.assign({ onClick: state.closeMenu }, props));
+    return react_1.default.createElement(MenuItem_1.default, { onClick: state.closeMenu, ...props });
 }
 exports.MenuItem = MenuItem;
 exports.default = MenuItem;

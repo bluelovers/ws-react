@@ -29,7 +29,7 @@ function extendNextDocumentWithMui(options) {
                             muiTheme,
                             sheet,
                         }))) !== null && _b !== void 0 ? _b : (react_1.default.createElement(styles_1.MuiThemeProvider, { theme: muiTheme },
-                            react_1.default.createElement(App, Object.assign({}, props))));
+                            react_1.default.createElement(App, { ...props })));
                         return sheet.collect(root);
                     };
                 };

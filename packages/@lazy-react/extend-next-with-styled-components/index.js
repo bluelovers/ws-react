@@ -23,7 +23,7 @@ function extendNextDocumentWithStyledComponents(options) {
                             var _a, _b;
                             const root = (_b = await ((_a = options === null || options === void 0 ? void 0 : options.renderPage) === null || _a === void 0 ? void 0 : _a.call(options, App, props, {
                                 sheet,
-                            }))) !== null && _b !== void 0 ? _b : (react_1.default.createElement(App, Object.assign({}, props)));
+                            }))) !== null && _b !== void 0 ? _b : (react_1.default.createElement(App, { ...props }));
                             // @ts-ignore
                             return sheet.collect(root);
                         };

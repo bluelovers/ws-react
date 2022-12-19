@@ -7,7 +7,7 @@ const material_ui_nested_menu_item_1 = tslib_1.__importDefault(require("material
 const useNestedMenuContext_1 = tslib_1.__importDefault(require("./useNestedMenuContext"));
 function NestedMenuItem(prop) {
     const state = useNestedMenuContext_1.default();
-    return react_1.default.createElement(material_ui_nested_menu_item_1.default, Object.assign({ onClick: state.closeMenu }, prop, { parentMenuOpen: !!state.menuPosition }));
+    return react_1.default.createElement(material_ui_nested_menu_item_1.default, { onClick: state.closeMenu, ...prop, parentMenuOpen: !!state.menuPosition });
 }
 exports.NestedMenuItem = NestedMenuItem;
 exports.default = NestedMenuItem;

@@ -9,7 +9,7 @@ const ReactSuspense = ({ fallback, content, ...prop }) => {
     if (typeof window === 'undefined') {
         return content !== null && content !== void 0 ? content : fallback;
     }
-    return react_1.default.createElement(react_1.Suspense, Object.assign({}, prop, { fallback: fallback }));
+    return react_1.default.createElement(react_1.Suspense, { ...prop, fallback: fallback });
 };
 exports.ReactSuspense = ReactSuspense;
 exports.default = exports.ReactSuspense;

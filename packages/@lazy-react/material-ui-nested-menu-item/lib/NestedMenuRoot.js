@@ -7,7 +7,7 @@ const useNestedMenuContext_1 = tslib_1.__importDefault(require("./useNestedMenuC
 const react_1 = tslib_1.__importDefault(require("react"));
 function NestedMenuRoot(props) {
     const state = useNestedMenuContext_1.default();
-    return react_1.default.createElement(Menu_1.default, Object.assign({ onClose: state.closeMenu }, props, { open: !!state.menuPosition, anchorReference: "anchorPosition", anchorPosition: state.menuPosition }));
+    return react_1.default.createElement(Menu_1.default, { onClose: state.closeMenu, ...props, open: !!state.menuPosition, anchorReference: "anchorPosition", anchorPosition: state.menuPosition });
 }
 exports.NestedMenuRoot = NestedMenuRoot;
 exports.default = NestedMenuRoot;

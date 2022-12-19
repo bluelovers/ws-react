@@ -44,18 +44,18 @@ function useNestedMenuContext() {
 exports.useNestedMenuContext = useNestedMenuContext;
 function NestedMenuItem(prop) {
     const state = useNestedMenuContext();
-    return react_1.default.createElement(material_ui_nested_menu_item_1.default, Object.assign({ onClick: state.closeMenu }, prop, { parentMenuOpen: !!state.menuPosition }));
+    return react_1.default.createElement(material_ui_nested_menu_item_1.default, { onClick: state.closeMenu, ...prop, parentMenuOpen: !!state.menuPosition });
 }
 exports.NestedMenuItem = NestedMenuItem;
 function NestedMenuRoot(props) {
     const state = useNestedMenuContext();
-    return react_1.default.createElement(Menu_1.default, Object.assign({ onClose: state.closeMenu }, props, { open: !!state.menuPosition, anchorReference: "anchorPosition", anchorPosition: state.menuPosition }));
+    return react_1.default.createElement(Menu_1.default, { onClose: state.closeMenu, ...props, open: !!state.menuPosition, anchorReference: "anchorPosition", anchorPosition: state.menuPosition });
 }
 exports.NestedMenuRoot = NestedMenuRoot;
 function MenuItem(props) {
     const state = useNestedMenuContext();
     // @ts-ignore
-    return react_1.default.createElement(MenuItem_1.default, Object.assign({ onClick: state.closeMenu }, props));
+    return react_1.default.createElement(MenuItem_1.default, { onClick: state.closeMenu, ...props });
 }
 exports.MenuItem = MenuItem;
 exports.default = NestedMenuItem;

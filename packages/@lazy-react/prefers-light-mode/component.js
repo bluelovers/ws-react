@@ -26,7 +26,7 @@ function PrefersLightMode({ config, value, defaultValue, ...props }) {
     const muiTheme = global_1.createTheme(theme, {
         setTheme,
     }).theme;
-    return (react_1.default.createElement(styles_1.MuiThemeProvider, Object.assign({}, props, { theme: muiTheme })));
+    return (react_1.default.createElement(styles_1.MuiThemeProvider, { ...props, theme: muiTheme }));
 }
 exports.PrefersLightMode = PrefersLightMode;
 exports.default = PrefersLightMode;
