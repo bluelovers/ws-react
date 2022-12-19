@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.15](https://github.com/bluelovers/ws-react/compare/@lazy-react/prefers-light-mode@1.0.14...@lazy-react/prefers-light-mode@1.0.15) (2022-12-19)
+
+
+
+### 🛠　Build System
+
+* update js ([9be0fcb](https://github.com/bluelovers/ws-react/commit/9be0fcb8a5a661758d9eed87694f44044b39ec2e))
+
+
+
 ## [1.0.14](https://github.com/bluelovers/ws-react/compare/@lazy-react/prefers-light-mode@1.0.13...@lazy-react/prefers-light-mode@1.0.14) (2020-11-04)
 
 **Note:** Version bump only for package @lazy-react/prefers-light-mode

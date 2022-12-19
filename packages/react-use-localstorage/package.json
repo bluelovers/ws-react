@@ -1,6 +1,6 @@
 {
   "name": "react-use-localstorage2",
-  "version": "4.0.11",
+  "version": "4.0.12",
   "description": "Access localStorage-like storage with React hooks, for Server and Client",
   "keywords": [
     "react",

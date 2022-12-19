@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.31](https://github.com/bluelovers/ws-react/compare/material-ui-theme-state@1.0.30...material-ui-theme-state@1.0.31) (2022-12-19)
+
+
+
+### 🛠　Build System
+
+* build files ([63f571e](https://github.com/bluelovers/ws-react/commit/63f571e5fa910b7851f789fcd1b506c8c2337864))
+
+
+### 📌　Dependencies
+
+* update deps ([7e2d402](https://github.com/bluelovers/ws-react/commit/7e2d40256e2b6215f546be4e436aaacc9067c3fb))
+
+
+
 ## [1.0.30](https://github.com/bluelovers/ws-react/compare/material-ui-theme-state@1.0.29...material-ui-theme-state@1.0.30) (2020-11-04)
 
 

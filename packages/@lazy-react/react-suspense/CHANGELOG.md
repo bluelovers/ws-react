@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.9](https://github.com/bluelovers/ws-react/compare/@lazy-react/react-suspense@1.0.8...@lazy-react/react-suspense@1.0.9) (2022-12-19)
+
+
+
+### 🛠　Build System
+
+* update js ([9be0fcb](https://github.com/bluelovers/ws-react/commit/9be0fcb8a5a661758d9eed87694f44044b39ec2e))
+
+
+
 ## [1.0.8](https://github.com/bluelovers/ws-react/compare/@lazy-react/react-suspense@1.0.7...@lazy-react/react-suspense@1.0.8) (2020-10-26)
 
 

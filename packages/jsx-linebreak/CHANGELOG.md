@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.13](https://github.com/bluelovers/ws-react/compare/jsx-linebreak@1.0.12...jsx-linebreak@1.0.13) (2022-12-19)
+
+
+
+### 🛠　Build System
+
+* update js ([9be0fcb](https://github.com/bluelovers/ws-react/commit/9be0fcb8a5a661758d9eed87694f44044b39ec2e))
+
+
+
 ## [1.0.12](https://github.com/bluelovers/ws-react/compare/jsx-linebreak@1.0.11...jsx-linebreak@1.0.12) (2020-10-22)
 
 
