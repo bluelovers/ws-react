@@ -1,6 +1,6 @@
 {
   "name": "@lazy-react/extend-next-with-styled-components",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "extend NextDocument With Styled Components",
   "homepage": "https://github.com/bluelovers/ws-react/tree/master/packages/@lazy-react/extend-next-with-styled-components#readme",
   "bugs": {

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://github.com/bluelovers/ws-react/compare/@lazy-react/material-ui-nested-menu-item@1.0.5...@lazy-react/material-ui-nested-menu-item@1.0.6) (2022-12-24)
+
+
+
+### 🔖　Miscellaneous
+
+* . ([c906fdd](https://github.com/bluelovers/ws-react/commit/c906fdd6c200709740adfcc1ff6aec4b4b752189))
+
+
+
 ## [1.0.5](https://github.com/bluelovers/ws-react/compare/@lazy-react/material-ui-nested-menu-item@1.0.4...@lazy-react/material-ui-nested-menu-item@1.0.5) (2022-12-19)
 
 

@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.13](https://github.com/bluelovers/ws-react/compare/react-use-localstorage2@4.0.12...react-use-localstorage2@4.0.13) (2022-12-24)
+
+
+
+### 📦　Code Refactoring
+
+* update import ([f4a0f65](https://github.com/bluelovers/ws-react/commit/f4a0f6534dd5e6155113cd13cd854bb9196e66d5))
+
+
+### 🔖　Miscellaneous
+
+* . ([c906fdd](https://github.com/bluelovers/ws-react/commit/c906fdd6c200709740adfcc1ff6aec4b4b752189))
+
+
+
 ## [4.0.12](https://github.com/bluelovers/ws-react/compare/react-use-localstorage2@4.0.11...react-use-localstorage2@4.0.12) (2022-12-19)
 
 

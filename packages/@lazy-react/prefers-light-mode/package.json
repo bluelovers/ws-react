@@ -1,6 +1,6 @@
 {
   "name": "@lazy-react/prefers-light-mode",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "detect if the user has requested the system use a light or dark color theme.",
   "keywords": [
     "lazy-react",
@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "lodash": "^4",
-    "material-ui-theme-state": "^1.0.31"
+    "material-ui-theme-state": "^1.0.32"
   },
   "peerDependencies": {
     "@material-ui/core": "^4",
