@@ -8,7 +8,7 @@ import {
 	iifNullItem,
 	assertStorageLike,
 } from '../util';
-import AbstractStorageProxy from '../proxy/abstract';
+import { AbstractStorageProxy } from '../proxy/abstract';
 
 export function createStorageHook(localStorage: AbstractStorageProxy<IStorageLike>)
 {

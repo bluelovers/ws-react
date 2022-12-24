@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import createStorageHook from '../src/core/v3';
-import localStorage from './setup';
+import { createStorageHook } from '../src/core/v3';
+import { localStorage } from './setup';
 import { iifNullItem } from '../src/util';
 
 describe('useLocalStorage', (): void =>

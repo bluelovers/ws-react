@@ -1,6 +1,6 @@
 import { StorageProxy } from './proxy';
-import webStorage from "local-storage-fallback";
+import { storage as webStorage } from "local-storage-fallback";
 
-export const storage = new StorageProxy(webStorage);
+export const storage = new StorageProxy<Storage | StorageFallback>(webStorage);
 
 export default storage

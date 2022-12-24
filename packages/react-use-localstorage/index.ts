@@ -3,7 +3,7 @@
 
 import { IStateInitialValue, IDispatchSetStateAction } from './src/types';
 import { createStorageHook } from './src/core';
-import storage from './src/storage'
+import { storage } from './src/storage'
 
 export { createStorageHook }
 

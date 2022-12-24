@@ -1,6 +1,6 @@
 import { IStorageLike } from '../types';
 import { isNullItem } from '../util';
-import AbstractStorageProxy from './abstract';
+import { AbstractStorageProxy } from './abstract';
 
 export class StorageProxy<S extends IStorageLike> extends AbstractStorageProxy<S>
 {

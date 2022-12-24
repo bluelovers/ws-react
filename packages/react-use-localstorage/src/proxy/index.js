@@ -1,10 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.StorageProxy = void 0;
-const tslib_1 = require("tslib");
 const util_1 = require("../util");
-const abstract_1 = tslib_1.__importDefault(require("./abstract"));
-class StorageProxy extends abstract_1.default {
+const abstract_1 = require("./abstract");
+class StorageProxy extends abstract_1.AbstractStorageProxy {
     getItem(key) {
         // @ts-ignore
         key = this.hashKey(key);
