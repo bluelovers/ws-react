@@ -46,7 +46,7 @@
     "ncu": "npx yarn-tool ncu -u",
     "sort-package-json": "npx yarn-tool sort",
     "tsc:default": "npx tsc -p tsconfig.json",
-    "tsc:esm": "npx tsc -p tsconfig.esm.json",
+    "tsc:esm": "tsc -p tsconfig.esm.json",
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
