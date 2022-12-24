@@ -11,7 +11,7 @@ function createLinkBreak(createElement, Fragment) {
             throw new TypeError(`current only support string`);
         }
         if (noBR) {
-            children = crlf_normalize_1.crlf(children);
+            children = (0, crlf_normalize_1.crlf)(children);
         }
         else {
             let i = 0;

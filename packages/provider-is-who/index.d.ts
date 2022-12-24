@@ -1,6 +1,7 @@
 /// <reference path="lib/env/now/index.d.ts" />
+/// <reference types="./types/global" />
 /// <reference types="node" />
-export declare type IProviderIsWhoParams = {
+export type IProviderIsWhoParams = {
     targetProcess?: NodeJS.Process;
     skipProvider?: string[];
 };

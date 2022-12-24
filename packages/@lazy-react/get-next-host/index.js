@@ -6,13 +6,13 @@ const get_next_ctx_1 = tslib_1.__importDefault(require("@lazy-react/get-next-ctx
 const is_req_https2_1 = tslib_1.__importDefault(require("is-req-https2"));
 const original_url2_1 = tslib_1.__importDefault(require("original-url2"));
 function getNextHost(_ctx) {
-    const ctx = get_next_ctx_1.default(_ctx);
+    const ctx = (0, get_next_ctx_1.default)(_ctx);
     if (!ctx.req) {
         return null;
     }
-    const secure = is_req_https2_1.default(ctx.req);
+    const secure = (0, is_req_https2_1.default)(ctx.req);
     let hostname;
-    let data = original_url2_1.default(ctx.req);
+    let data = (0, original_url2_1.default)(ctx.req);
     if (!hostname) {
         if (data.hostname) {
             hostname = data.hostname;

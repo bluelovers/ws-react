@@ -6,7 +6,7 @@ const Menu_1 = tslib_1.__importDefault(require("@material-ui/core/Menu/Menu"));
 const useNestedMenuContext_1 = tslib_1.__importDefault(require("./useNestedMenuContext"));
 const react_1 = tslib_1.__importDefault(require("react"));
 function NestedMenuRoot(props) {
-    const state = useNestedMenuContext_1.default();
+    const state = (0, useNestedMenuContext_1.default)();
     return react_1.default.createElement(Menu_1.default, { onClose: state.closeMenu, ...props, open: !!state.menuPosition, anchorReference: "anchorPosition", anchorPosition: state.menuPosition });
 }
 exports.NestedMenuRoot = NestedMenuRoot;

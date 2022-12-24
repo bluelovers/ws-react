@@ -8,7 +8,7 @@ const tslib_1 = require("tslib");
 const react_1 = require("react");
 const NestedMenuContext_1 = tslib_1.__importDefault(require("./NestedMenuContext"));
 function useNestedMenuContext() {
-    return react_1.useContext(NestedMenuContext_1.default);
+    return (0, react_1.useContext)(NestedMenuContext_1.default);
 }
 exports.useNestedMenuContext = useNestedMenuContext;
 exports.default = useNestedMenuContext;

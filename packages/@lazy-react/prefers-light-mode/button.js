@@ -6,7 +6,7 @@ const react_1 = tslib_1.__importDefault(require("react"));
 const global_1 = require("material-ui-theme-state/lib/global");
 const Button_1 = tslib_1.__importDefault(require("@material-ui/core/Button"));
 function ButtonTheme(props) {
-    const { setTheme } = global_1.useTheme();
+    const { setTheme } = (0, global_1.useTheme)();
     let click = () => {
         setTheme(theme => {
             // @ts-ignore

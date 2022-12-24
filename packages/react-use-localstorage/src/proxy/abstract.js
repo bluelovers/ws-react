@@ -6,7 +6,7 @@ const handleMap = new WeakMap();
 class AbstractStorageProxy {
     constructor(storage) {
         this.storage = storage;
-        util_1.assertStorageLike(this.storage);
+        (0, util_1.assertStorageLike)(this.storage);
     }
     hashKey(key) {
         return key;
@@ -15,19 +15,19 @@ class AbstractStorageProxy {
         this.storage.removeItem(this.hashKey(key));
     }
     equal(a, b) {
-        a = util_1.iifNullItem(a);
-        b = util_1.iifNullItem(b);
+        a = (0, util_1.iifNullItem)(a);
+        b = (0, util_1.iifNullItem)(b);
         return a === b || this.serializesValue(a) === this.serializesValue(b);
     }
     serializesValue(value) {
         return JSON.stringify(value);
     }
     deserializesValue(value) {
-        if (!util_1.isNullItem(value)) {
+        if (!(0, util_1.isNullItem)(value)) {
             // @ts-ignore
             value = JSON.parse(value);
         }
-        return util_1.iifNullItem(value);
+        return (0, util_1.iifNullItem)(value);
     }
     mount(handleStorage) {
         if (typeof window !== "undefined") {

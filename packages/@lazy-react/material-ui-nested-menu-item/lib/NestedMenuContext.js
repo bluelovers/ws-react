@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NestedMenuContext = void 0;
 const react_1 = require("react");
-exports.NestedMenuContext = react_1.createContext({
+exports.NestedMenuContext = (0, react_1.createContext)({
     menuPosition: null,
 });
 exports.default = exports.NestedMenuContext;

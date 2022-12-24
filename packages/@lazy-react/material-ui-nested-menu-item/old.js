@@ -6,13 +6,13 @@ const react_1 = tslib_1.__importStar(require("react"));
 const material_ui_nested_menu_item_1 = tslib_1.__importDefault(require("material-ui-nested-menu-item"));
 const Menu_1 = tslib_1.__importDefault(require("@material-ui/core/Menu/Menu"));
 const MenuItem_1 = tslib_1.__importDefault(require("@material-ui/core/MenuItem"));
-exports.NestedMenuContext = react_1.createContext({
+exports.NestedMenuContext = (0, react_1.createContext)({
     menuPosition: null,
 });
 const NestedMenuProvider = (prop) => {
     var _a;
-    const [menuPosition, setMenuPosition] = react_1.useState((_a = prop.menuPosition) !== null && _a !== void 0 ? _a : null);
-    const defaults = react_1.useMemo(() => {
+    const [menuPosition, setMenuPosition] = (0, react_1.useState)((_a = prop.menuPosition) !== null && _a !== void 0 ? _a : null);
+    const defaults = (0, react_1.useMemo)(() => {
         const handleItemClick = (event) => {
             //console.log(`handleItemClick`, event, menuPosition)
             setMenuPosition({
@@ -39,7 +39,7 @@ const NestedMenuProvider = (prop) => {
 };
 exports.NestedMenuProvider = NestedMenuProvider;
 function useNestedMenuContext() {
-    return react_1.useContext(exports.NestedMenuContext);
+    return (0, react_1.useContext)(exports.NestedMenuContext);
 }
 exports.useNestedMenuContext = useNestedMenuContext;
 function NestedMenuItem(prop) {

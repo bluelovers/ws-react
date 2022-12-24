@@ -18,7 +18,7 @@ function extendNextDocumentWithMui(options) {
     async function getInitialProps(ctx) {
         var _a, _b;
         const sheet = (_a = options === null || options === void 0 ? void 0 : options.sheet) !== null && _a !== void 0 ? _a : new styles_1.ServerStyleSheets();
-        const muiTheme = (_b = options === null || options === void 0 ? void 0 : options.muiTheme) !== null && _b !== void 0 ? _b : createMuiTheme_1.default();
+        const muiTheme = (_b = options === null || options === void 0 ? void 0 : options.muiTheme) !== null && _b !== void 0 ? _b : (0, createMuiTheme_1.default)();
         const initialProps = await getInitialPropsOld.call(oldDocument, {
             ...ctx,
             renderPage() {

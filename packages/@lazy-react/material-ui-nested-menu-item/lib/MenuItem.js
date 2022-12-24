@@ -6,7 +6,7 @@ const MenuItem_1 = tslib_1.__importDefault(require("@material-ui/core/MenuItem")
 const useNestedMenuContext_1 = tslib_1.__importDefault(require("./useNestedMenuContext"));
 const react_1 = tslib_1.__importDefault(require("react"));
 function MenuItem(props) {
-    const state = useNestedMenuContext_1.default();
+    const state = (0, useNestedMenuContext_1.default)();
     return react_1.default.createElement(MenuItem_1.default, { onClick: state.closeMenu, ...props });
 }
 exports.MenuItem = MenuItem;

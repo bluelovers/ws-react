@@ -1,6 +1,6 @@
 export declare const enum EnumEnvProvider {
     NOW = "now"
 }
-export declare type IProviderEntry = {
+export type IProviderEntry = {
     provider: string;
 };

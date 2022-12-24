@@ -10,13 +10,14 @@
     "createMuiTheme",
     "material-ui"
   ],
-  "homepage": "https://github.com/bluelovers/ws-react/material-ui-theme-state#readme",
+  "homepage": "https://github.com/bluelovers/ws-react/tree/master/packages/material-ui-theme-state#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-react/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-react.git"
+    "url": "git+https://github.com/bluelovers/ws-react.git",
+    "directory": "packages/material-ui-theme-state"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -29,6 +30,12 @@
     "coverage": "npx nyc yarn run test",
     "lint": "npx eslint **/*.ts",
     "test": "echo \"Error: no test specified\"",
+    "test:jest": "jest --passWithNoTests",
+    "test:jest:coverage": "yarn run test:jest -- --coverage",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
+    "test:snapshot": "yarn run test -- -u",
+    "test:tsd": "ynpx tsd",
+    "posttest": "yarn run build",
     "build": "yarn run build:tsc",
     "build:tsc": "yarn run tsc:default && yarn run tsc:esm",
     "postbuild": "git commit -m \"build: build files\" ./esm ./lib & echo postbuild",
@@ -37,18 +44,18 @@
     "prepublishOnly": "echo prepublishOnly",
     "postpublish_": "git commit -m \"publish new version\" .",
     "ncu": "npx yarn-tool ncu -u",
-    "posttest": "yarn run build",
     "sort-package-json": "npx yarn-tool sort",
     "tsc:default": "npx tsc -p tsconfig.json",
-    "tsc:esm": "npx tsc -p tsconfig.esm.json"
+    "tsc:esm": "npx tsc -p tsconfig.esm.json",
+    "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
     "ts-type": "^3.0.1"
   },
   "peerDependencies": {
     "@material-ui/core": "^4",
-    "@types/react": "^16",
-    "react": "^17",
+    "@types/react": "^18",
+    "react": "^18",
     "tslib": "^2"
   },
   "gitHead": "7087b6fcae235888b58ff84599744b33367a669f"

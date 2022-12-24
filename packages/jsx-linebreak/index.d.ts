@@ -1,12 +1,12 @@
 /**
  * Created by user on 2020/1/16.
  */
-export declare type IPropLike<T = any> = {
+export type IPropLike<T = any> = {
     children: T;
 } | {
     children?: T;
 };
-export declare type IWarpPropLike<T> = (T | {
+export type IWarpPropLike<T> = (T | {
     children?: string;
 }) & {
     /**

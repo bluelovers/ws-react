@@ -9,12 +9,12 @@ class StorageProxy extends abstract_1.default {
         // @ts-ignore
         key = this.hashKey(key);
         let value = this.storage.getItem(key);
-        return util_1.isNullItem(value) ? null : JSON.parse(value);
+        return (0, util_1.isNullItem)(value) ? null : JSON.parse(value);
     }
     setItem(key, value) {
         // @ts-ignore
         key = this.hashKey(key);
-        if (util_1.isNullItem(value)) {
+        if ((0, util_1.isNullItem)(value)) {
             this.storage.removeItem(key);
         }
         else {

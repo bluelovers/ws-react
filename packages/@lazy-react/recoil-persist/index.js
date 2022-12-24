@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 const recoil_persist2_1 = tslib_1.__importDefault(require("recoil-persist2"));
 function recoilPersist(...argv) {
     if (typeof window !== 'undefined') {
-        return recoil_persist2_1.default(...argv);
+        return (0, recoil_persist2_1.default)(...argv);
     }
     return {
         RecoilPersist() {
