@@ -40,7 +40,7 @@
     "lint:all": "yarn-tool ws run lint --concurrency 1",
     "lint:since": "yarn run lint:all -- --since",
     "pretest": "echo pretest",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\"",
     "test:all": "yarn-tool ws run test --concurrency 1",
     "test:jest:clearCache": "jest --clearCache",
     "test:since": "yarn run test:all -- --since",
