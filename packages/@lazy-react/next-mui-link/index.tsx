@@ -7,9 +7,8 @@ import React, {
 	PropsWithoutRef,
 } from 'react';
 import NextLink, { LinkProps } from 'next/link';
-import MuiLink from '@material-ui/core/Link';
-import { OverridableComponent, DefaultComponentProps, OverrideProps } from '@material-ui/core/OverridableComponent';
-import { LinkTypeMap } from '@material-ui/core/Link/Link';
+import MuiLink, { LinkTypeMap } from '@mui/material/Link';
+import { OverridableComponent, DefaultComponentProps, OverrideProps } from '@mui/types';
 
 export type INextMuiLinkProps = DefaultComponentProps<LinkTypeMap<LinkProps>>;
 
