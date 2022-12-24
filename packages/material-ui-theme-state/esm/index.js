@@ -1,6 +1,7 @@
 /**
  * Created by user on 2020/1/13.
  */
+// @ts-ignore
 import _createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import _useTheme from '@material-ui/core/styles/useTheme';
 export function create(options = {}) {

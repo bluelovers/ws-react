@@ -2,6 +2,7 @@
  * Created by user on 2020/1/13.
  */
 
+// @ts-ignore
 import _createMuiTheme, { ThemeOptions, Theme } from '@material-ui/core/styles/createMuiTheme';
 import { ITSResolvable } from 'ts-type/lib/generic';
 import _useTheme from '@material-ui/core/styles/useTheme';

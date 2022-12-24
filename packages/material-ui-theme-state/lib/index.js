@@ -5,6 +5,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.create = void 0;
 const tslib_1 = require("tslib");
+// @ts-ignore
 const createMuiTheme_1 = tslib_1.__importDefault(require("@material-ui/core/styles/createMuiTheme"));
 const useTheme_1 = tslib_1.__importDefault(require("@material-ui/core/styles/useTheme"));
 function create(options = {}) {
