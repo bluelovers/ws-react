@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://github.com/bluelovers/ws-react/compare/@lazy-react/next-useragent@1.0.5...@lazy-react/next-useragent@1.0.6) (2023-01-01)
+
+
+
+### 🔖　Miscellaneous
+
+* . ([961b7b4](https://github.com/bluelovers/ws-react/commit/961b7b417a0ca36858857ad4b4204bc7ad4ade78))
+
+
+
 ## [1.0.5](https://github.com/bluelovers/ws-react/compare/@lazy-react/next-useragent@1.0.4...@lazy-react/next-useragent@1.0.5) (2023-01-01)
 
 **Note:** Version bump only for package @lazy-react/next-useragent
