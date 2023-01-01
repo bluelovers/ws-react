@@ -4,14 +4,9 @@ export function getNextPageContext<T extends NextPageContext>(_ctx: T | {
 	ctx: T
 })
 {
-	let ctx = (_ctx as any as T);
-
-	// @ts-ignore
-	if (ctx?.ctx)
-	{
-		// @ts-ignore
-		ctx = ctx.ctx;
-	}
+	const ctx: T = (_ctx as any as {
+		ctx: T
+	})?.ctx ?? _ctx as T;
 
 	return ctx
 }
