@@ -1,5 +1,6 @@
-import { AppContext } from 'next/dist/pages/_app';
-import { DocumentContext, NextPageContext } from 'next/dist/next-server/lib/utils';
+import { AppContext } from 'next/app';
+import { NextPageContext } from 'next';
+import { DocumentContext } from 'next/document';
 export declare function getNextHost<T extends AppContext | DocumentContext | NextPageContext>(_ctx: T): {
     secure: boolean;
     origin: string;

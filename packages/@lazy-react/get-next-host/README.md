@@ -1,6 +1,6 @@
 # README.md
 
-    
+    next.js >= 13
 
 ## install
 

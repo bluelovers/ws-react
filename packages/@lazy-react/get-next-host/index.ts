@@ -1,19 +1,20 @@
-import { AppContext } from 'next/dist/pages/_app';
-import { DocumentContext, NextPageContext } from 'next/dist/next-server/lib/utils';
-import getNextPageContext from '@lazy-react/get-next-ctx';
-import isReqHttps from 'is-req-https2';
-import originalUrl from 'original-url2';
+import { AppContext } from 'next/app';
+import { NextPageContext } from 'next';
+import { DocumentContext } from 'next/document'
+import { getNextPageContext } from '@lazy-react/get-next-ctx';
+import { checkResHttp } from 'is-req-https2';
+import { originalUrl } from 'original-url2';
 
 export function getNextHost<T extends AppContext | DocumentContext | NextPageContext>(_ctx: T)
 {
 	const ctx = getNextPageContext(_ctx);
 
-	if (!ctx.req)
+	if (!ctx?.req)
 	{
 		return null
 	}
 
-	const secure = isReqHttps(ctx.req);
+	const secure = checkResHttp(ctx.req);
 	let hostname: string;
 
 	let data = originalUrl(ctx.req);
