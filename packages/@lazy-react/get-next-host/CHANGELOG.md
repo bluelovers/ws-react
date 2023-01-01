@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/bluelovers/ws-react/compare/@lazy-react/get-next-host@1.0.3...@lazy-react/get-next-host@2.0.1) (2023-01-01)
+
+
+### BREAKING CHANGES
+
+* next.js >= 13
+
+
+
+### ✨　Features
+
+* next.js >= 13 ([2ff3e91](https://github.com/bluelovers/ws-react/commit/2ff3e913d8088a0bedeef0a2ecf550cbc31a97ac))
+
+
+
 ## [1.0.3](https://github.com/bluelovers/ws-react/compare/@lazy-react/get-next-host@1.0.2...@lazy-react/get-next-host@1.0.3) (2022-12-24)
 
 

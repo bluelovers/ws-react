@@ -1,6 +1,6 @@
 {
   "name": "@lazy-react/next-useragent",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "homepage": "https://github.com/bluelovers/ws-react/tree/master/packages/@lazy-react/next-useragent#readme",
   "bugs": {
@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@lazy-http/get-user-agent": "^1.0.3",
-    "@lazy-react/get-next-ctx": "^1.0.3"
+    "@lazy-react/get-next-ctx": "^1.0.4"
   },
   "peerDependencies": {
     "tslib": "^2"
